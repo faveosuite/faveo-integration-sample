@@ -1,10 +1,15 @@
-# Sample Laravel integration web app
-This is a sample Laravel web application, showing integration with below platforms
+# About this repo
+This repo contains a sample Laravel web application, showing integration with below platforms
 
 - Agora invoicing
 - Agora license manager
 
 This application is muti tenant and can be deployed on any cloud insfrastructure 
+
+Who is this for
+--------------------------
+Anyone who wants to start a software product business for their self hosted(on premises) or Saas(cloud hosted) products can use this platform and go live in least amount of time
+
 
 Requirements
 --------------------------
