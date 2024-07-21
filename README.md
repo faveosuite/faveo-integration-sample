@@ -1,8 +1,8 @@
 # About this repo
 This repo contains a sample Laravel web application, showing integration with below platforms
 
-- Agora invoicing
-- Agora license manager
+- <a href="https://github.com/ladybirdweb/agora-invoicing-community">Agora invoicing </a>
+- <a href="https://github.com/ladybirdweb/agora-license-manager">Agora license manager</a>
 
 This application is muti tenant and can be deployed on any cloud insfrastructure 
 
