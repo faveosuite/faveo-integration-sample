@@ -23,7 +23,7 @@ To run this application your host just needs a couple of things:
 
 Supported platforms
 --------------------------
-The muti tenant saas web applicatiion is tested and successfully deployed on <a href="https://www.digitalocean.com/">Digital Ocean</a>
+This muti tenant saas web applicatiion is tested and successfully deployed on <a href="https://www.digitalocean.com/">Digital Ocean</a> using Kubernetes
 
 
 Contributing
