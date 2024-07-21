@@ -26,5 +26,5 @@ Visit the <a href="https://github.com/ladybirdweb/agora-integration-sample/issue
 
 Follow Us
 --------------------------
-<a href="https://www.facebook.com/faveohelpdesk" ><img src="http://www.faveohelpdesk.com/wp-content/uploads/2016/12/fb.png" /></a> <a href="https://twitter.com/faveohelpdesk" ><img src="http://www.faveohelpdesk.com/wp-content/uploads/2016/12/twitter.png" /></a> <a href="https://www.linkedin.com/company/627599" ><img src="http://www.faveohelpdesk.com/wp-content/uploads/2016/12/linkedin.png" /></a> <a href="https://www.youtube.com/channel/UC-eqh-h241b1janp6sU7Iiw" ><img src="http://www.faveohelpdesk.com/wp-content/uploads/2016/12/youtube.png" /></a> <a href="https://plus.google.com/117596052965493985407" ><img src="http://www.faveohelpdesk.com/wp-content/uploads/2016/12/google.png" /></a>
+<a href="https://www.facebook.com/faveohelpdesk" ><img src="http://www.faveohelpdesk.com/wp-content/uploads/2016/12/fb.png" /></a> <a href="https://twitter.com/faveohelpdesk" ><img src="http://www.faveohelpdesk.com/wp-content/uploads/2016/12/twitter.png" /></a> <a href="https://www.linkedin.com/showcase/faveohelpdesk" ><img src="http://www.faveohelpdesk.com/wp-content/uploads/2016/12/linkedin.png" /></a> <a href="https://www.youtube.com/@faveohelpdesk" ><img src="http://www.faveohelpdesk.com/wp-content/uploads/2016/12/youtube.png" /></a> 
 
