@@ -28,7 +28,7 @@ This muti tenant saas web application is tested and successfully deployed on <a 
 
 Contributing
 --------------------------
-Create your own fork of master repositoray and use <a href="https://github.com/nvie/gitflow">git-flow</a> to create a new feature. Once the feature is published in your fork, send a pull request to begin the conversation of integrating your new feature into this repo.
+Create your own fork of master repository and use <a href="https://github.com/nvie/gitflow">git-flow</a> to create a new feature. Once the feature is published in your fork, send a pull request to begin the conversation of integrating your new feature into this repo.
 
 Help
 --------------------------
