@@ -23,12 +23,12 @@ To run this application your host just needs a couple of things:
 
 Supported platforms
 --------------------------
-This muti tenant saas web applicatiion is tested and successfully deployed on <a href="https://www.digitalocean.com/">Digital Ocean</a> using Kubernetes
+This muti tenant saas web application is tested and successfully deployed on <a href="https://www.digitalocean.com/">Digital Ocean</a> using Kubernetes
 
 
 Contributing
 --------------------------
-Create your own fork of Faveo master repositoray and use <a href="https://github.com/nvie/gitflow">git-flow</a> to create a new feature. Once the feature is published in your fork, send a pull request to begin the conversation of integrating your new feature into Faveo.
+Create your own fork of master repositoray and use <a href="https://github.com/nvie/gitflow">git-flow</a> to create a new feature. Once the feature is published in your fork, send a pull request to begin the conversation of integrating your new feature into this repo.
 
 Help
 --------------------------
