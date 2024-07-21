@@ -21,6 +21,11 @@ To run this application your host just needs a couple of things:
   * Database: MySQL(8.0+) or Postgres or SQLite or SQL Server
   * Web Server Extension: Pretty URLs or Search Engine Friendly URL's have to be enabled in your web server configuration
 
+Supported platforms
+--------------------------
+The muti tenant saas web applicatiion is tested and successfully deployed on <a href="https://www.digitalocean.com/">Digital Ocean</a>
+
+
 Contributing
 --------------------------
 Create your own fork of Faveo master repositoray and use <a href="https://github.com/nvie/gitflow">git-flow</a> to create a new feature. Once the feature is published in your fork, send a pull request to begin the conversation of integrating your new feature into Faveo.
