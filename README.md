@@ -4,11 +4,11 @@ This repo contains a sample Laravel web application, showing integration with be
 - <a href="https://github.com/ladybirdweb/agora-invoicing-community">Agora invoicing </a>
 - <a href="https://github.com/ladybirdweb/agora-license-manager">Agora license manager</a>
 
-This application is muti tenant and can be deployed on any cloud insfrastructure 
+This application is muti tenant and can be deployed on any cloud infrastructure 
 
 Who is this for
 --------------------------
-Anyone who wants to start a software product business for their self hosted(on premises) or Saas(cloud hosted) products can use this platform and go live in least amount of time
+Anyone who wants to start a software product business for their self hosted(on premises) or Saas(cloud hosted) products can use this platform and go live in least amount of time and start selling their products with out of the box billing, payment gatewaey, license management and cloud deployment for saas application. 
 
 
 Requirements
