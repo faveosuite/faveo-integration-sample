@@ -1,5 +1,5 @@
 # About this repo
-This repo contains a sample Laravel web application, showing integration with below platforms
+This repo contains a sample <a href="https://github.com/laravel/laravel">Laravel</a> web application, showing integration with below platforms
 
 - <a href="https://github.com/ladybirdweb/agora-invoicing-community">Agora invoicing </a>
 - <a href="https://github.com/ladybirdweb/agora-license-manager">Agora license manager</a>
