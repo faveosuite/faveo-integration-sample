@@ -1,5 +1,5 @@
-# Sample integration app
-This is a sample Laravel application, showing integration with below platforms
+# Sample Laravel integration web app
+This is a sample Laravel web application, showing integration with below platforms
 
 - Agora invoicing
 - Agora license manager
