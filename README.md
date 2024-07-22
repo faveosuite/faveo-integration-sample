@@ -27,7 +27,7 @@ This muti tenant saas web application is tested and successfully deployed on <a 
 
 Installation Guide
 --------------------------
-The installation steps for Agora is same as that of Faveo. Please refer to our <a href="https://docs.faveohelpdesk.com/" target="_blank">Installation Guide</a> for steps.
+The installation steps for this app is same as that of Faveo. Please refer to our <a href="https://docs.faveohelpdesk.com/" target="_blank">Installation Guide</a> for steps.
 
 Credits
 --------------------------
