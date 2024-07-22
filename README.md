@@ -25,6 +25,43 @@ Supported platforms
 --------------------------
 This muti tenant saas web application is tested and successfully deployed on <a href="https://www.digitalocean.com/">Digital Ocean</a> using Kubernetes
 
+Installation Guide
+--------------------------
+The installation steps for Agora is same as that of Faveo. Please refer to our <a href="https://docs.faveohelpdesk.com/" target="_blank">Installation Guide</a> for steps.
+
+Credits
+--------------------------
+  * Laravel Framework
+  * Admin LTE Theme
+
+Agora Features
+--------------------------
+https://github.com/ladybirdweb/agorainvoicing/wiki/Agora-Features
+
+Error Reporting
+--------------------------
+This app uses [Bugsnag](https://www.bugsnag.com/) to monitor application stability in production enviroment. It helps us to provide bug fixes and feature updates after analyzing the logs and crash reports for the application. **If you are customizing the application under development environment, we request you to disable this error reporting.** It will allow us to ignore the errors occurred during your development cycle. It can be easily disabled by updating your app environment to development in `.env`.
+
+You can still report the issues on our [Github Issue page](https://github.com/ladybirdweb/agora-integration-sample/issues) by providing proper information about the changes you are trying to implement. We assure you that community will help you and your customization can be a part of this application if it follows our contributing guidelines.
+
+# Security Policy
+
+## Supported Versions
+
+Check mark versions are supported with security patches.
+
+| Version | Supported          |
+| ------- | ------------------ |
+| 1.0.0   | :white_check_mark: |
+| < 1.0   | :x: |
+
+## Supported Updates
+
+Security updates will be released once in a month. If it's high priority, we will make it twice a month
+
+## Reporting a Vulnerability
+
+Please report (suspected) security vulnerabilities to support@faveohelpdesk.com. You will receive a response from us within 48 hours. If the issue is confirmed, we will release a patch as soon as possible depending on complexity but historically within a few days.
 
 Contributing
 --------------------------
