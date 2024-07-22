@@ -34,10 +34,6 @@ Credits
   * Laravel Framework
   * Admin LTE Theme
 
-Agora Features
---------------------------
-https://github.com/ladybirdweb/agorainvoicing/wiki/Agora-Features
-
 Error Reporting
 --------------------------
 This app uses [Bugsnag](https://www.bugsnag.com/) to monitor application stability in production enviroment. It helps us to provide bug fixes and feature updates after analyzing the logs and crash reports for the application. **If you are customizing the application under development environment, we request you to disable this error reporting.** It will allow us to ignore the errors occurred during your development cycle. It can be easily disabled by updating your app environment to development in `.env`.
