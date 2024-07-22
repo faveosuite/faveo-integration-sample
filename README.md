@@ -4,7 +4,7 @@ This repo contains a sample <a href="https://github.com/laravel/laravel">Laravel
 - <a href="https://github.com/ladybirdweb/agora-invoicing-community">Agora invoicing </a>
 - <a href="https://github.com/ladybirdweb/agora-license-manager">Agora license manager</a>
 
-This application is muti tenant and can be deployed on any cloud infrastructure 
+This application is <a href="https://github.com/archtechx/tenancy">muti tenant</a> and can be deployed on any cloud infrastructure 
 
 Who is this for?
 --------------------------
