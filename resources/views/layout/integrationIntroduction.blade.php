@@ -1,7 +1,6 @@
 @extends('welcome')
 
 @section('content')
-
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <div class="content-header">
@@ -24,45 +23,108 @@
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
-                <p>
-                    Welcome to our comprehensive <strong>Integration Guide</strong>. This document provides detailed instructions for enhancing your scripts with <strong>advanced features</strong> and <strong>logical operations</strong>. Our solutions are designed to offer <strong>robust protection</strong> and unparalleled versatility, allowing you to maintain complete control over your software products.
-                </p>
-                <p>
-                    With a minimal increase in setup time, you can achieve substantial security enhancements, ensuring that your products are both protected and flexible.
-                </p>
+                <!-- Introduction Section -->
+                <h2 class="text-primary border-bottom pb-2">Introduction to License Manager</h2>
+                <p>A License Manager is an essential tool for developers looking to protect and manage their software products effectively. It offers advanced protection features, ensuring that your scripts are secure and versatile, with logical operations for extreme guard. This tool is crucial for those who seek full control over their products, providing peace of mind by safeguarding against unauthorized usage and distribution.</p>
+                <p>The License Manager not only secures your software but also streamlines the process of creating and managing licenses, making it an invaluable asset in the software development lifecycle. With its robust features, it enables developers to control product versions, manage installations, and enforce licensing terms seamlessly.</p>
 
-                <div ></div>
+                <hr class="my-4">
 
-                <h2>Key Features and Benefits</h2>
-                <p>
-                    This guide enables you to:
-                </p>
-                <ul >
-                    <li><strong>Advanced Protection:</strong> Implement robust security measures with ease.</li>
-                    <li><strong>Complete Control:</strong> Maintain full oversight of your software products.</li>
-                    <li><strong>Versatility:</strong> Adapt the solution to a variety of needs with flexible features.</li>
+                <!-- Why You Need a License Manager Section -->
+                <h2 class="text-primary border-bottom pb-2">Why Do You Need a License Manager?</h2>
+                <p>In today's digital landscape, where software piracy and unauthorized usage are prevalent, a License Manager is a necessity. It ensures that only authorized users can access and use your software, thereby protecting your intellectual property and revenue. By integrating a License Manager, you can prevent unauthorized distribution, enforce licensing agreements, and ensure compliance with your terms of service.</p>
+
+                <hr class="my-4">
+
+                <!-- Benefits Section -->
+                <h2 class="text-primary border-bottom pb-2">Benefits of Using a License Manager</h2>
+                <ul class="list-unstyled">
+                    <li><strong class="text-primary">Enhanced Security:</strong> Protects your scripts with advanced features and logical operations, offering unparalleled security for your software.</li>
+                    <li><strong class="text-primary">Full Control:</strong> Allows you to manage and monitor product versions, installations, and updates, giving you complete control over your software lifecycle.</li>
+                    <li><strong class="text-primary">Automated Management:</strong> Automates the process of license creation, distribution, and management, saving you time and effort.</li>
+                    <li><strong class="text-primary">Revenue Protection:</strong> Prevents unauthorized usage, ensuring that only paying customers can use your software, thereby protecting your revenue.</li>
+                    <li><strong class="text-primary">Versatility:</strong> Offers a range of features such as invisible background updates, customizable notifications, and detailed reports, making it adaptable to various use cases.</li>
                 </ul>
 
-                <div ></div>
+                <hr class="my-4">
 
-                <h2>Capabilities</h2>
-                <p>
-                    The guide also provides the tools you need to:
-                </p>
-                <ul >
-                    <li>Create and deploy <strong>online installers</strong> seamlessly.</li>
-                    <li>Efficiently <strong>download MySQL queries</strong>.</li>
-                    <li>Accurately <strong>parse product details</strong> for better management.</li>
-                    <li>Perform smooth <strong>updates of old installations</strong>.</li>
-                    <li>Execute other <strong>essential tasks</strong> critical to your operations.</li>
+                <!-- Functionality Section -->
+                <h2 class="text-primary border-bottom pb-2">Functionality of the License Manager</h2>
+                <p>The License Manager integrates seamlessly into your PHP-based applications, offering a wide range of functionalities:</p>
+                <ul class="list-unstyled">
+                    <li><strong class="text-primary">Automatic Updates:</strong> Invisibly updates your software and databases in the background, ensuring your users always have the latest version.</li>
+                    <li><strong class="text-primary">Version Control:</strong> Manages unlimited products, versions, and files, with options for active version limits and individual expiration dates.</li>
+                    <li><strong class="text-primary">Custom Notifications:</strong> Sends notifications in your preferred language, keeping your users informed about updates and changes.</li>
+                    <li><strong class="text-primary">Real-time Reporting:</strong> Provides thorough, real-time reports and detailed changelogs, giving you insights into the usage and performance of your software.</li>
+                    <li><strong class="text-primary">Complete Automation:</strong> Features a built-in API for full automation, allowing you to automate the licensing process from start to finish.</li>
                 </ul>
 
-                <p>
-                    This guide is the ideal resource for developers who seek to implement <strong>robust protection</strong> and gain access to <strong>extensive functionality</strong> in managing their software products efficiently.
-                </p>
-            </div><!-- /.container-fluid -->
-        </div>
+                <p>Now that you understand what a License Manager is and the extensive benefits it offers, it's time to integrate it into your workflow and experience the security and control it provides.</p>
+
+            </div>
         <!-- /.content -->
     </div>
+    </div>
     <!-- /.content-wrapper -->
+    <style>
+        /* Container styling for the documentation */
+        .documentation-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* Heading styling */
+        .documentation-container h2 {
+            color: #0056b3;
+            font-size: 1.8em;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph styling */
+        .documentation-container p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        /* Horizontal rule styling */
+        .documentation-container hr {
+            border: 0;
+            border-top: 2px solid #0056b3;
+            margin: 40px 0;
+        }
+
+        /* List styling */
+        .documentation-container ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        .documentation-container li {
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        /* List item heading styling */
+        .documentation-container li strong {
+            color: #0056b3;
+        }
+
+        /* Ensure responsiveness */
+        @media (max-width: 768px) {
+            .documentation-container {
+                padding: 15px;
+            }
+
+            .documentation-container h2 {
+                font-size: 1.5em;
+            }
+        }
+
+    </style>
 @endsection
