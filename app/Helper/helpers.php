@@ -52,3 +52,28 @@ function aplCustomPost($url, $post_info = '', $refer = '')
 
     return $server_response_array;
 }
+function getCurl($get_url, $token = null)
+{
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $get_url);
+
+    if ($token) {
+        $headers = [
+            'Authorization: Bearer ' . $token,
+        ];
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    }
+
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 90);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $content = curl_exec($ch);
+
+    if ($content === false) {
+        echo 'Curl error: ' . curl_error($ch);
+    }
+
+    curl_close($ch);
+
+    return json_decode($content, true);
+}

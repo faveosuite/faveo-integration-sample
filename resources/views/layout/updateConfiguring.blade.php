@@ -41,17 +41,17 @@
                     <pre class="highlight">
                         <code>
 &lt;?php
-//MAIN CONFIG FILE OF PHP AUTO UPDATE SCRIPT. CAN BE EDITED MANUALLY OR GENERATED USING Extra Tools > Configuration Generator TAB IN PHP AUTO UPDATE SCRIPT DASHBOARD. THE FILE MUST BE INCLUDED IN YOUR SCRIPT BEFORE YOU PROVIDE IT TO USER.
+//MAIN CONFIG FILE OF Agora License Manager SCRIPT. CAN BE EDITED MANUALLY OR GENERATED USING Extra Tools > Configuration Generator TAB IN Agora License Manager SCRIPT DASHBOARD. THE FILE MUST BE INCLUDED IN YOUR SCRIPT BEFORE YOU PROVIDE IT TO USER.
 
 //-----------<span class="nt">BASIC SETTINGS</span>-----------//
 
-//The URL (without / at the end) where PHP Auto Update Script from /WEB directory is installed on your server. No matter how many products you want to install and/or update, a single installation is enough.
-<span class="nt">define</span>(<span class="s">"AUS_ROOT_URL"</span>, <span class="s">"https://www.demo.phpmillion.com/aus"</span>);
+//The URL (without / at the end) where Agora License Manager Script from /WEB directory is installed on your server. No matter how many products you want to install and/or update, a single installation is enough.
+<span class="nt">define</span>(<span class="s">"AUS_ROOT_URL"</span>, <span class="s">"https://www.demo.license.com/aus"</span>);
 
-//Unique numeric ID of product that needs to be installed and/or updated. Can be obtained by going to Products > View Products tab in PHP Auto Update Script dashboard and selecting product to be installed and/or updated. At the end of URL, you will see something like products_edit.php?product_id=NUMBER, where NUMBER is unique product ID. Cannot be modified after installing script.
+//Unique numeric ID of product that needs to be installed and/or updated. Can be obtained by going to Products > View Products tab in Agora License Manager Script dashboard and selecting product to be installed and/or updated. At the end of URL, you will see something like products_edit.php?product_id=NUMBER, where NUMBER is unique product ID. Cannot be modified after installing script.
 <span class="nt">define</span>(<span class="s">"AUS_PRODUCT_ID"</span>, 1);
 
-//Unique key of product that needs to be installed and/or updated. The key can be generated automatically or entered manually during product creation and can be obtained by going to Products > View Products tab in PHP Auto Update Script dashboard and selecting product to be installed and/or updated. If key is modified via PHP Auto Update Script dashboard, it must be updated in configuration file too.
+//Unique key of product that needs to be installed and/or updated. The key can be generated automatically or entered manually during product creation and can be obtained by going to Products > View Products tab in Agora License Manager Script dashboard and selecting product to be installed and/or updated. If key is modified via Agora License Manager Script dashboard, it must be updated in configuration file too.
 <span class="nt">define</span>(<span class="s">"AUS_PRODUCT_KEY"</span>, <span class="s">"some_random_key"</span>);
 
 //Connection timeout in seconds. If product can't connect to and/or receive data from updates server after this period, connection will be dropped. Rule of thumb: 1 second for each MB to download. For example, if ZIP archives with your products are 50 MB in size, set this value to 50. As most compressed products only contain several MB of data, the default value of 30 should be enough. Increasing connection timeout will also slightly increase server resources usage.
@@ -76,11 +76,11 @@
 
 //-----------<span class="nt">NOTIFICATIONS FOR DEBUGGING PURPOSES ONLY. SHOULD NEVER BE DISPLAYED TO END USER</span>-----------//
 
-<span class="nt">define</span>(<span class="s">"AUS_CORE_NOTIFICATION_INVALID_ROOT_URL"</span>, <span class="s">"Configuration error: invalid root URL of PHP Auto Update Script installation"</span>);
+<span class="nt">define</span>(<span class="s">"AUS_CORE_NOTIFICATION_INVALID_ROOT_URL"</span>, <span class="s">"Configuration error: invalid root URL of Agora License Manager Script installation"</span>);
 <span class="nt">define</span>(<span class="s">"AUS_CORE_NOTIFICATION_INVALID_PRODUCT_ID"</span>, <span class="s">"Configuration error: invalid product ID"</span>);
 <span class="nt">define</span>(<span class="s">"AUS_CORE_NOTIFICATION_INVALID_PRODUCT_KEY"</span>, <span class="s">"Configuration error: invalid product key"</span>);
 <span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_PERMISSIONS"</span>, <span class="s">"Configuration error: invalid root directory permissions"</span>);
-<span class="nt">define</span>(<span class="s">"AUS_CORE_NOTIFICATION_INACCESSIBLE_ROOT_URL"</span>, <span class="s">"Server error: impossible to establish connection to your PHP Auto Update Script installation"</span>);
+<span class="nt">define</span>(<span class="s">"AUS_CORE_NOTIFICATION_INACCESSIBLE_ROOT_URL"</span>, <span class="s">"Server error: impossible to establish connection to your Agora License Manager Script installation"</span>);
 
 //-----------<span class="nt">SOME EXTRA STUFF. SHOULD NEVER BE REMOVED OR MODIFIED</span>-----------//
 <span class="nt">define</span>(<span class="s">"AUS_DIRECTORY"</span>, __DIR__);
@@ -104,16 +104,16 @@
                     <tbody>
                     <tr >
                         <td><code>AUS_ROOT_URL</code>*</td>
-                        <td>The URL (without / at the end) where PHP Auto Update Script from <code>/WEB</code> directory is installed on your server. No matter how many products you want to install and/or update, a single installation is enough.</td>
+                        <td>The URL (without / at the end) where Agora License Manager Script from <code>/WEB</code> directory is installed on your server. No matter how many products you want to install and/or update, a single installation is enough.</td>
                         <td></td>
                     </tr><tr>
                         <td><code>AUS_PRODUCT_ID</code>*</td>
-                        <td>Unique numeric ID of product that needs to be installed and/or updated. Can be obtained by going to <code>Products &gt; View Products</code> tab in PHP Auto Update Script dashboard and selecting product to be installed and/or updated. At the end of URL, you will see something like <code>products_edit.php?product_id=NUMBER</code>, where NUMBER is unique product ID.</td>
+                        <td>Unique numeric ID of product that needs to be installed and/or updated. Can be obtained by going to <code>Products &gt; View Products</code> tab in Agora License Manager Script dashboard and selecting product to be installed and/or updated. At the end of URL, you will see something like <code>products_edit.php?product_id=NUMBER</code>, where NUMBER is unique product ID.</td>
                         <td>Cannot be modified after installing script.</td>
                     </tr><tr >
                         <td><code>AUS_PRODUCT_KEY</code>*</td>
-                        <td>Unique key of product that needs to be installed and/or updated. The key can be generated automatically or entered manually during product creation and can be obtained by going to <code>Products &gt; View Products</code> tab in PHP Auto Update Script dashboard and selecting product to be installed and/or updated.</td>
-                        <td>If key is modified via PHP Auto Update Script dashboard, it must be updated in configuration file too.</td>
+                        <td>Unique key of product that needs to be installed and/or updated. The key can be generated automatically or entered manually during product creation and can be obtained by going to <code>Products &gt; View Products</code> tab in Agora License Manager Script dashboard and selecting product to be installed and/or updated.</td>
+                        <td>If key is modified via Agora License Manager Script dashboard, it must be updated in configuration file too.</td>
                     </tr><tr>
                         <td><code>AUS_CONNECTION_TIMEOUT</code></td>
                         <td>Connection timeout in seconds. If product can't connect to and/or receive data from updates server after this period, connection will be dropped. Rule of thumb: 1 second for each MB to download. For example, if ZIP archives with your products are 50 MB in size, set this value to 50. As most compressed products only contain several MB of data, the default value of 30 should be enough.</td>

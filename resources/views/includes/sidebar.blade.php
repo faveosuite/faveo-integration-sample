@@ -61,18 +61,33 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('apis') }}" class="nav-link">
+                                <a href="#" class="nav-link">
                                     <i class="nav-icon fas fa-code"></i>
                                     <p>
-                                        Calling Function
+                                        Calling Functions
+                                        <i class="fas fa-angle-left right"></i>
                                     </p>
                                 </a>
+                                <ul class="nav nav-treeview">
+                                    <li class="nav-item">
+                                        <a href="{{ url('callingFunction') }}" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>License</p>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ url('updateCalling') }}" class="nav-link">
+                                            <i class="far fa-circle nav-icon"></i>
+                                            <p>Update</p>
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('apiList') }}" class="nav-link">
+                                <a href="{{ url('encoding') }}" class="nav-link">
                                     <i class="nav-icon fas fa-key"></i>
                                     <p>
-                                        Encoding Application
+                                        Encoding and Licensing
                                     </p>
                                 </a>
                             </li>

@@ -29,14 +29,14 @@ class DatabaseSeeder extends Seeder
                 'description' => 'This API is used to test the connection between the Product and the Agora License Manager.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The key of the product Id',
                         'values' => '8',
                     ],
                     [
-                        'params' => 'connection_hash',
+                        'param' => 'connection_hash',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The hash of the connection',
@@ -53,42 +53,42 @@ class DatabaseSeeder extends Seeder
                 'description' => 'This is used by script on users machine to check if license is active and add installation details to Agora License Manager database during installation of protected script',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The key of the product Id',
                         'values' => '8',
                     ],
                     [
-                        'params' => 'client_email',
+                        'param' => 'client_email',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The email of the client',
                         'values' => '',
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The code of the license',
                         'values' => 'VWNKDSNCJKCNSU89',
                     ],
                     [
-                        'params' => 'root_url',
+                        'param' => 'root_url',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The domain URL of the product',
                         'values' => 'https://demo.localhost/',
                     ],
                     [
-                        'params' => 'installation_hash',
+                        'param' => 'installation_hash',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the installation',
                         'values' => '75hgvdhgwvkjgweyu2t675672f3kjgb3gbrhg',
                     ],
                     [
-                        'params' => 'license_signature',
+                        'param' => 'license_signature',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the license',
@@ -105,42 +105,42 @@ class DatabaseSeeder extends Seeder
                 'description' => 'This is used by script on users machine to check if license is active and get MySQL scheme for local license storage from Agora License Manager database during installation of protected script',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The key of the product Id',
                         'values' => '8',
                     ],
                     [
-                        'params' => 'client_email',
+                        'param' => 'client_email',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The email of the client',
                         'values' => '',
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The code of the license',
                         'values' => 'VWNKDSNCJKCNSU89',
                     ],
                     [
-                        'params' => 'root_url',
+                        'param' => 'root_url',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The domain URL of the product',
                         'values' => 'https://demo.localhost/',
                     ],
                     [
-                        'params' => 'installation_hash',
+                        'param' => 'installation_hash',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the installation',
                         'values' => '75hgvdhgwvkjgweyu2t675672f3kjgb3gbrhg',
                     ],
                     [
-                        'params' => 'license_signature',
+                        'param' => 'license_signature',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the license',
@@ -157,42 +157,42 @@ class DatabaseSeeder extends Seeder
                 'description' => 'This is used by script on users machine to check if license is active and add callback details to Agora License Manager database during license check of protected script',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The key of the product Id',
                         'values' => '8',
                     ],
                     [
-                        'params' => 'client_email',
+                        'param' => 'client_email',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The email of the client',
                         'values' => '',
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The code of the license',
                         'values' => 'VWNKDSNCJKCNSU89',
                     ],
                     [
-                        'params' => 'root_url',
+                        'param' => 'root_url',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The domain URL of the product',
                         'values' => 'https://demo.localhost/',
                     ],
                     [
-                        'params' => 'installation_hash',
+                        'param' => 'installation_hash',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the installation',
                         'values' => '75hgvdhgwvkjgweyu2t675672f3kjgb3gbrhg',
                     ],
                     [
-                        'params' => 'license_signature',
+                        'param' => 'license_signature',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the license',
@@ -209,42 +209,42 @@ class DatabaseSeeder extends Seeder
                 'description' => 'This API is used to get the specific version details.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The key of the product Id',
                         'values' => '8',
                     ],
                     [
-                        'params' => 'client_email',
+                        'param' => 'client_email',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The email of the client',
                         'values' => '',
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The code of the license',
                         'values' => 'VWNKDSNCJKCNSU89',
                     ],
                     [
-                        'params' => 'root_url',
+                        'param' => 'root_url',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The domain URL of the product',
                         'values' => 'https://demo.localhost/',
                     ],
                     [
-                        'params' => 'installation_hash',
+                        'param' => 'installation_hash',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the installation',
                         'values' => '75hgvdhgwvkjgweyu2t675672f3kjgb3gbrhg',
                     ],
                     [
-                        'params' => 'license_signature',
+                        'param' => 'license_signature',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the license',
@@ -261,42 +261,42 @@ class DatabaseSeeder extends Seeder
                 'description' => 'This API is used to get all version details.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The key of the product Id',
                         'values' => '8',
                     ],
                     [
-                        'params' => 'client_email',
+                        'param' => 'client_email',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The email of the client',
                         'values' => '',
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The code of the license',
                         'values' => 'VWNKDSNCJKCNSU89',
                     ],
                     [
-                        'params' => 'root_url',
+                        'param' => 'root_url',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The domain URL of the product',
                         'values' => 'https://demo.localhost/',
                     ],
                     [
-                        'params' => 'installation_hash',
+                        'param' => 'installation_hash',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the installation',
                         'values' => '75hgvdhgwvkjgweyu2t675672f3kjgb3gbrhg',
                     ],
                     [
-                        'params' => 'license_signature',
+                        'param' => 'license_signature',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the license',
@@ -313,42 +313,42 @@ class DatabaseSeeder extends Seeder
                 'description' => 'This API is used to fetch MySQL query of a specified version.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The key of the product Id',
                         'values' => '8',
                     ],
                     [
-                        'params' => 'client_email',
+                        'param' => 'client_email',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The email of the client',
                         'values' => '',
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The code of the license',
                         'values' => 'VWNKDSNCJKCNSU89',
                     ],
                     [
-                        'params' => 'root_url',
+                        'param' => 'root_url',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The domain URL of the product',
                         'values' => 'https://demo.localhost/',
                     ],
                     [
-                        'params' => 'installation_hash',
+                        'param' => 'installation_hash',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the installation',
                         'values' => '75hgvdhgwvkjgweyu2t675672f3kjgb3gbrhg',
                     ],
                     [
-                        'params' => 'license_signature',
+                        'param' => 'license_signature',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the license',
@@ -365,42 +365,42 @@ class DatabaseSeeder extends Seeder
                 'description' => 'This API is used to download and extract archive with files of a specified version.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The key of the product Id',
                         'values' => '8',
                     ],
                     [
-                        'params' => 'client_email',
+                        'param' => 'client_email',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The email of the client',
                         'values' => '',
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The code of the license',
                         'values' => 'VWNKDSNCJKCNSU89',
                     ],
                     [
-                        'params' => 'root_url',
+                        'param' => 'root_url',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The domain URL of the product',
                         'values' => 'https://demo.localhost/',
                     ],
                     [
-                        'params' => 'installation_hash',
+                        'param' => 'installation_hash',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the installation',
                         'values' => '75hgvdhgwvkjgweyu2t675672f3kjgb3gbrhg',
                     ],
                     [
-                        'params' => 'license_signature',
+                        'param' => 'license_signature',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The random hash of the license',
@@ -417,21 +417,21 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Authenticates a user and returns an access token.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'client_email',
+                        'param' => 'client_email',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The client email or username for login',
                         'values' => 'demo@license.com',
                     ],
                     [
-                        'params' => 'client_password',
+                        'param' => 'client_password',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The password of the client',
                         'values' => 'Demo@123',
                     ],
                     [
-                        'params' => 'g-recaptcha-response',
+                        'param' => 'g-recaptcha-response',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The v3 reCAPTCHA response token',
@@ -448,14 +448,14 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Initiates a password reset process by sending a reset link to the user’s email.',
                 'parameters' => json_encode([
                 [
-                    'params' => 'client_email',
+                    'param' => 'client_email',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The client email for send the reset link',
                     'values' => 'demo@license.com',
                 ],
                 [
-                    'params' => 'g-recaptcha-response',
+                    'param' => 'g-recaptcha-response',
                     'type' => 'String',
                     'opt_or_req' => 'Optional',
                     'description' => 'The v3 reCAPTCHA response token',
@@ -472,28 +472,28 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Resets the user’s password using the token sent to their email.',
                 'parameters' => json_encode([
                 [
-                    'params' => 'email',
+                    'param' => 'email',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The client email for reset the password',
                     'values' => 'demo@license.com',
                 ],
                 [
-                    'params' => 'password',
+                    'param' => 'password',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The new password of the client',
                     'values' => 'Demo@1234',
                 ],
                 [
-                    'params' => 'token',
+                    'param' => 'token',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The token for reset the password',
                     'values' => ' ',
                 ],
                 [
-                    'params' => 'g-recaptcha-response',
+                    'param' => 'g-recaptcha-response',
                     'type' => 'String',
                     'opt_or_req' => 'Optional',
                     'description' => 'The v3 reCAPTCHA response token',
@@ -510,14 +510,14 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Saves the debug settings value.',
                 'parameters' => json_encode([
                         [
-                            'params' => 'debug',
+                            'param' => 'debug',
                             'type' => 'Boolean',
                             'opt_or_req' => 'Optional',
                             'description' => 'This parameter enables or disables the debugging mode in the application.',
                             'values' => 'true or false',
                         ],
                         [
-                            'params' => 'user_id',
+                            'param' => 'user_id',
                             'type' => 'Integer',
                             'opt_or_req' => 'Required',
                             'description' => 'The ID of the user whose token will be cached or forgotten based on the debug mode.',
@@ -544,21 +544,21 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Verifies the recovery code provided by the user.',
                 'parameters' => json_encode([
                         [
-                            'params' => 'recovery_code',
+                            'param' => 'recovery_code',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'The recovery code provided by the user.',
                             'values' => ' ',
                         ],
                         [
-                            'params' => 'PPAuth',
+                            'param' => 'PPAuth',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'The PPAuth(Encrypted User Id) token for the user.',
                             'values' => ' ',
                         ],
                         [
-                            'params' => 'g-recaptcha-response',
+                            'param' => 'g-recaptcha-response',
                             'type' => 'String',
                             'opt_or_req' => 'Optional',
                             'description' => 'The v3 reCAPTCHA response token',
@@ -576,21 +576,21 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Verifies the 2FA code provided by the user.',
                 'parameters' => json_encode([
                         [
-                            'params' => 'totp',
+                            'param' => 'totp',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'The Authenticator OTP provided by the user.',
                             'values' => ' ',
                         ],
                         [
-                            'params' => 'PPAuth',
+                            'param' => 'PPAuth',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'The PPAuth(Encrypted User Id) token for the user.',
                             'values' => ' ',
                         ],
                         [
-                            'params' => 'g-recaptcha-response',
+                            'param' => 'g-recaptcha-response',
                             'type' => 'String',
                             'opt_or_req' => 'Optional',
                             'description' => 'The v3 reCAPTCHA response token',
@@ -626,7 +626,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Validates the setup token for two-factor authentication.',
                 'parameters' => json_encode([
                         [
-                            'params' => 'totp',
+                            'param' => 'totp',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'The Authenticator OTP provided by the user.',
@@ -671,7 +671,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Verifies the user’s password for two-factor authentication.',
                 'parameters' => json_encode([
                         [
-                            'params' => 'password',
+                            'param' => 'password',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'The password provided by the user.',
@@ -698,56 +698,56 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Updates the user’s profile information.',
                 'parameters' => json_encode([
                 [
-                    'params' => 'client_fname',
+                    'param' => 'client_fname',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The first name of the client.',
                     'values' => ''
                 ],
                 [
-                    'params' => 'client_lname',
+                    'param' => 'client_lname',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The last name of the client.',
                     'values' => ''
                 ],
                 [
-                    'params' => 'client_username',
+                    'param' => 'client_username',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The username of the client, must be unique.',
                     'values' => ''
                 ],
                 [
-                    'params' => 'client_email',
+                    'param' => 'client_email',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The email address of the client, must be unique and in a valid email format.',
                     'values' => ''
                 ],
                 [
-                    'params' => 'client_mobile',
+                    'param' => 'client_mobile',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The mobile number of the client.',
                     'values' => ''
                 ],
                 [
-                    'params' => 'client_mobile_code',
+                    'param' => 'client_mobile_code',
                     'type' => 'String',
                     'opt_or_req' => 'Optional',
                     'description' => 'The mobile code for the client\'s mobile number.',
                     'values' => ''
                 ],
                 [
-                    'params' => 'client_timezone_id',
+                    'param' => 'client_timezone_id',
                     'type' => 'String',
                     'opt_or_req' => 'Required',
                     'description' => 'The timezone ID for the client.',
                     'values' => ''
                 ],
                 [
-                    'params' => 'client_profile_pic',
+                    'param' => 'client_profile_pic',
                     'type' => 'File',
                     'opt_or_req' => 'Optional',
                     'description' => 'The profile picture of the client. Allowed file types: png, jpeg, jpg.',
@@ -764,21 +764,21 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Updates the user’s password.',
                 'parameters' => json_encode([
                         [
-                            'params' => 'old_password',
+                            'param' => 'old_password',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'The current password of the user.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'new_password',
+                            'param' => 'new_password',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'The new password that the user wants to set.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'confirm_password',
+                            'param' => 'confirm_password',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'The confirmation of the new password.',
@@ -805,70 +805,70 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Adds a new product.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'api_key_secret',
+                        'param' => 'api_key_secret',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The API key secret used for authentication.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_title',
+                        'param' => 'product_title',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The title of the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_sku',
+                        'param' => 'product_sku',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The SKU (Stock Keeping Unit) of the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_status',
+                        'param' => 'product_status',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The status of the product (integer value between 0 and 2).',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_description',
+                        'param' => 'product_description',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'A description of the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_url_homepage',
+                        'param' => 'product_url_homepage',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The URL of the product homepage.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_url_download',
+                        'param' => 'product_url_download',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The URL for downloading the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_version',
+                        'param' => 'product_version',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The version of the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_envato_id',
+                        'param' => 'product_envato_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Optional',
                         'description' => 'The Envato ID of the product (should be an integer if provided).',
                         'values' => ''
                     ],
                     [
-                        'params' => 'ip_address',
+                        'param' => 'ip_address',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The IP address of the requestor. If not provided, it will be fetched from the server.',
@@ -895,21 +895,21 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Deletes a product.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the product to be deleted.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'api_key_secret',
+                        'param' => 'api_key_secret',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The API key secret used for authentication.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'ip_address',
+                        'param' => 'ip_address',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The IP address of the requestor. If not provided, it will be fetched from the server.',
@@ -926,77 +926,77 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Updates product details.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'api_key_secret',
+                        'param' => 'api_key_secret',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The API key secret used for authentication.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the product to be updated.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_title',
+                        'param' => 'product_title',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The title of the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_sku',
+                        'param' => 'product_sku',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The SKU (Stock Keeping Unit) of the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_status',
+                        'param' => 'product_status',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The status of the product (integer value between 0 and 2).',
                         'values' => '0, 1, 2'
                     ],
                     [
-                        'params' => 'product_description',
+                        'param' => 'product_description',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'A description of the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_url_homepage',
+                        'param' => 'product_url_homepage',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The URL of the product homepage.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_url_download',
+                        'param' => 'product_url_download',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The URL for downloading the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_version',
+                        'param' => 'product_version',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The version of the product.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_envato_id',
+                        'param' => 'product_envato_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Optional',
                         'description' => 'The Envato ID of the product (should be an integer if provided).',
                         'values' => ''
                     ],
                     [
-                        'params' => 'ip_address',
+                        'param' => 'ip_address',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The IP address of the requestor. If not provided, it will be fetched from the server.',
@@ -1013,7 +1013,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Fetches product details for editing.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the product to retrieve.',
@@ -1031,7 +1031,7 @@ class DatabaseSeeder extends Seeder
                 'parameters' => json_encode(
                     [
                         [
-                            'params' => 'id',
+                            'param' => 'id',
                             'type' => 'Integer',
                             'opt_or_req' => 'Required',
                             'description' => 'The ID of the product to retrieve details for.',
@@ -1049,7 +1049,7 @@ class DatabaseSeeder extends Seeder
                 'parameters' => json_encode(
                     [
                         [
-                            'params' => 'id',
+                            'param' => 'id',
                             'type' => 'Integer',
                             'opt_or_req' => 'Required',
                             'description' => 'The ID of the product to retrieve Product Installations.',
@@ -1067,7 +1067,7 @@ class DatabaseSeeder extends Seeder
                 'parameters' => json_encode(
                     [
                         [
-                            'params' => 'id',
+                            'param' => 'id',
                             'type' => 'Integer',
                             'opt_or_req' => 'Required',
                             'description' => 'The ID of the product to retrieve Product Licenses.',
@@ -1085,7 +1085,7 @@ class DatabaseSeeder extends Seeder
                 'parameters' => json_encode(
                     [
                         [
-                            'params' => 'id',
+                            'param' => 'id',
                             'type' => 'Integer',
                             'opt_or_req' => 'Required',
                             'description' => 'The ID of the product to retrieve Product Versions.',
@@ -1111,7 +1111,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Displays detailed information about a specific version.',
                 'parameters' =>  json_encode([
                     [
-                        'params' => 'version_id',
+                        'param' => 'version_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the version whose details you want to retrieve.',
@@ -1127,7 +1127,7 @@ class DatabaseSeeder extends Seeder
                 'method' => 'GET',
                 'description' => 'Displays the callbacks associated with a specific version.',
                 'parameters' => json_encode([
-                    'params' => 'version_id',
+                    'param' => 'version_id',
                     'type' => 'Integer',
                     'opt_or_req' => 'Required',
                     'description' => 'The ID of the version for which callbacks are to be retrieved.',
@@ -1144,49 +1144,49 @@ class DatabaseSeeder extends Seeder
                 'parameters' => json_encode(
                     [
                         [
-                            'params' => 'api_key_secret',
+                            'param' => 'api_key_secret',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'API key for authentication.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_fname',
+                            'param' => 'client_fname',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'First name of the client.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_lname',
+                            'param' => 'client_lname',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'Last name of the client.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_email',
+                            'param' => 'client_email',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'Email address of the client. Must be a valid email format.',
                             'values' => 'example@example.com'
                         ],
                         [
-                            'params' => 'client_username',
+                            'param' => 'client_username',
                             'type' => 'String',
                             'opt_or_req' => 'Optional',
                             'description' => 'Username for the client.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_status',
+                            'param' => 'client_status',
                             'type' => 'Integer',
                             'opt_or_req' => 'Required',
                             'description' => 'Status of the client. Must be an integer between 0 and 2.',
                             'values' => '0, 1, 2'
                         ],
                         [
-                            'params' => 'client_role',
+                            'param' => 'client_role',
                             'type' => 'String',
                             'opt_or_req' => 'Optional',
                             'description' => 'Role of the client. Defaults to "client". If set to 0, role is "admin".',
@@ -1205,7 +1205,7 @@ class DatabaseSeeder extends Seeder
                 'parameters' => json_encode(
                     [
                         [
-                            'params' => 'client_id',
+                            'param' => 'client_id',
                             'type' => 'Integer',
                             'opt_or_req' => 'Required',
                             'description' => 'The client ID to exclude from the results.',
@@ -1223,14 +1223,14 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Deletes a client.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'client_id',
+                        'param' => 'client_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'ID of the client to be deleted.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'api_key_secret',
+                        'param' => 'api_key_secret',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'API key for authentication.',
@@ -1248,56 +1248,56 @@ class DatabaseSeeder extends Seeder
                 'parameters' => json_encode([
                     [
                         [
-                            'params' => 'api_key_secret',
+                            'param' => 'api_key_secret',
                             'type' => 'String',
                             'opt_or_req' => 'Required',
                             'description' => 'API key for authentication.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_id',
+                            'param' => 'client_id',
                             'type' => 'Integer',
                             'opt_or_req' => 'Required',
                             'description' => 'ID of the client to be updated.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_fname',
+                            'param' => 'client_fname',
                             'type' => 'String',
                             'opt_or_req' => 'Optional',
                             'description' => 'First name of the client.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_lname',
+                            'param' => 'client_lname',
                             'type' => 'String',
                             'opt_or_req' => 'Optional',
                             'description' => 'Last name of the client.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_email',
+                            'param' => 'client_email',
                             'type' => 'String',
                             'opt_or_req' => 'Optional',
                             'description' => 'Email address of the client.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_username',
+                            'param' => 'client_username',
                             'type' => 'String',
                             'opt_or_req' => 'Optional',
                             'description' => 'Username of the client.',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_status',
+                            'param' => 'client_status',
                             'type' => 'Integer',
                             'opt_or_req' => 'Optional',
                             'description' => 'Status of the client (0 for inactive, 1 for active).',
                             'values' => ''
                         ],
                         [
-                            'params' => 'client_role',
+                            'param' => 'client_role',
                             'type' => 'Integer',
                             'opt_or_req' => 'Optional',
                             'description' => 'Role of the client (0 for admin, 1 for client).',
@@ -1315,7 +1315,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Fetches client details for editing.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'client_id',
+                        'param' => 'client_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the client to be edited.',
@@ -1332,7 +1332,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Displays detailed information about a client.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'client_id',
+                        'param' => 'client_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the client whose information is being retrieved.',
@@ -1349,7 +1349,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Displays the installations associated with a client.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'client_id',
+                        'param' => 'client_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the client whose installations are being retrieved.',
@@ -1366,7 +1366,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Displays the licenses associated with a client.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'client_id',
+                        'param' => 'client_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the client whose licenses are being retrieved.',
@@ -1384,98 +1384,98 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Adds a new license.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'api_key_secret',
+                        'param' => 'api_key_secret',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'API key for authentication.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the product for which the license is being added.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The unique code for the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_require_domain',
+                        'param' => 'license_require_domain',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'Indicates whether the license requires a domain (1 for yes, 0 for no).',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_status',
+                        'param' => 'license_status',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The status of the license (0 for inactive, 1 for active, 2 for expired).',
                         'values' => ''
                     ],
                     [
-                        'params' => 'client_id',
+                        'param' => 'client_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Optional',
                         'description' => 'The ID of the client to whom the license is assigned. If not provided, it will be set to NULL.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_order_number',
+                        'param' => 'license_order_number',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The order number associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_ip',
+                        'param' => 'license_ip',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The IP address associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_domain',
+                        'param' => 'license_domain',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The domain associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_limit',
+                        'param' => 'license_limit',
                         'type' => 'Integer',
                         'opt_or_req' => 'Optional',
                         'description' => 'The limit associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_expire_date',
+                        'param' => 'license_expire_date',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The expiration date of the license in YYYY-MM-DD format.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_updates_date',
+                        'param' => 'license_updates_date',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The date of the last update for the license in YYYY-MM-DD format.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_support_date',
+                        'param' => 'license_support_date',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The support date for the license in YYYY-MM-DD format.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_comments',
+                        'param' => 'license_comments',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'Additional comments related to the license.',
@@ -1501,14 +1501,14 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Deletes a license.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'license_id',
+                        'param' => 'license_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the license to be deleted.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'api_key_secret',
+                        'param' => 'api_key_secret',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'API key for authentication.',
@@ -1526,105 +1526,105 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Updates license details.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'api_key_secret',
+                        'param' => 'api_key_secret',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'API key for authentication.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_id',
+                        'param' => 'license_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the license to be updated.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'product_id',
+                        'param' => 'product_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the product associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_require_domain',
+                        'param' => 'license_require_domain',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'Whether the license requires a domain.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_status',
+                        'param' => 'license_status',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The status of the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'client_id',
+                        'param' => 'client_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Optional',
                         'description' => 'The ID of the client associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The code of the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_order_number',
+                        'param' => 'license_order_number',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The order number associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_ip',
+                        'param' => 'license_ip',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The IP address associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_domain',
+                        'param' => 'license_domain',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'The domain associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_limit',
+                        'param' => 'license_limit',
                         'type' => 'Integer',
                         'opt_or_req' => 'Optional',
                         'description' => 'The limit associated with the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_expire_date',
+                        'param' => 'license_expire_date',
                         'type' => 'Date',
                         'opt_or_req' => 'Optional',
                         'description' => 'The expiration date of the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_updates_date',
+                        'param' => 'license_updates_date',
                         'type' => 'Date',
                         'opt_or_req' => 'Optional',
                         'description' => 'The date of the last update to the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_support_date',
+                        'param' => 'license_support_date',
                         'type' => 'Date',
                         'opt_or_req' => 'Optional',
                         'description' => 'The date of the last support for the license.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_comments',
+                        'param' => 'license_comments',
                         'type' => 'String',
                         'opt_or_req' => 'Optional',
                         'description' => 'Comments associated with the license.',
@@ -1642,7 +1642,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Fetches license details for editing.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'license_id',
+                        'param' => 'license_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the license to be retrieved.',
@@ -1659,7 +1659,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Deactivates a license.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The license code of the license to be deactivated.',
@@ -1676,14 +1676,14 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Updates the license code.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'old_license_code',
+                        'param' => 'old_license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The current license code that needs to be updated.',
                         'values' => ''
                     ],
                     [
-                        'params' => 'license_code',
+                        'param' => 'license_code',
                         'type' => 'String',
                         'opt_or_req' => 'Required',
                         'description' => 'The new license code to replace the old one.',
@@ -1700,7 +1700,7 @@ class DatabaseSeeder extends Seeder
                 'description' => 'Displays detailed information about a license.',
                 'parameters' => json_encode([
                     [
-                        'params' => 'license_id',
+                        'param' => 'license_id',
                         'type' => 'Integer',
                         'opt_or_req' => 'Required',
                         'description' => 'The ID of the license to be retrieved.',
