@@ -48,6 +48,7 @@
                                     <div class="form-control-plaintext">{{ $description }}</div>
                                 </div>
                             </div>
+                            @if(!empty($parameters))
                             <div class="row mt-3">
                                 <div class="col">
                                     <label class="form-label">Parameters</label>
@@ -63,7 +64,7 @@
                                         <tbody>
                                         @foreach(json_decode($parameters, true) as $parameter)
                                         <tr>
-                                            <td><code>{{ $parameter['params'] }}</code></td>
+                                            <td><code>{{ $parameter['param'] }}</code></td>
                                             <td>{{ $parameter['type'] }}</td>
                                             <td>{{ $parameter['opt_or_req'] }}</td>
                                             <td>{{ $parameter['description'] }}</td>
@@ -86,9 +87,9 @@
                                             <tbody>
                                             @foreach(json_decode($parameters, true) as $parameter)
                                                 <tr>
-                                                    <td>{{ $parameter['params'] }}</td>
+                                                    <td>{{ $parameter['param'] }}</td>
                                                     <td>
-                                                        <input type="text" id="{{ $parameter['params'] }}" name="{{ $parameter['params'] }}" value="{{ $parameter['values'] }}">
+                                                        <input type="text" id="{{ $parameter['param'] }}" name="{{ $parameter['param'] }}" value="{{ $parameter['values'] }}">
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -97,6 +98,7 @@
                                     </form>
                                 </div>
                             </div>
+                            @endif
                             <div class="row mt-3">
                                 <div class="col">
                                     <label class="form-label">Response</label>
@@ -114,8 +116,8 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button class="btn btn-primary mr-2" onclick="submit()" >
-                            <i class="fa-solid fa-play pr-1"></i> Run request
+                        <button class="btn btn-primary mr-2" onclick="submit({{ json_encode($method) }}, {{ json_encode($parameters) }})" >
+                        <i class="fa-solid fa-play pr-1"></i> Run request
                         </button>
                     </div>
                 </div>
@@ -126,23 +128,33 @@
     <!-- /.content -->
 </div>
 <script>
-    function submit() {
-        // Get form data
-        const form = document.getElementById('parametersForm');
-        const formData = new FormData(form);
+    function submit(method, parameter) {
+        let data = {};
 
-        // Convert FormData to an object
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
-        var post = new URLSearchParams(data).toString();
+        if (parameter !== null) {
+            // Get form data
+            const form = document.getElementById('parametersForm');
+            const formData = new FormData(form);
+
+            // Convert FormData to an object
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+        } else {
+            data = null; // Set data to null if parameter is null
+        }
+
+        const post = data ? new URLSearchParams(data).toString() : '';
         console.log(post);
+
         const postData = {
+            method: method,
             post: post,
-            endpoint: document.getElementById('endpoint').innerHTML // Ensure $endpoint is JSON encoded
+            endpoint: document.getElementById('endpoint').innerText // Ensure $endpoint is JSON encoded
         };
-        console.log(postData)
+
+        console.log(postData);
+
         fetch('/integration/public/sendRequest', {
             method: 'POST',
             headers: {
@@ -161,6 +173,7 @@
                 console.error('There was an error!', error);
             });
     }
+
     function escapeHtml(text) {
         const map = {
             '&': '&amp;',
@@ -169,7 +182,7 @@
             '"': '&quot;',
             "'": '&#039;'
         };
-        return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+        return text.replace(/[&<>"']/g, m => map[m]);
     }
 </script>
 

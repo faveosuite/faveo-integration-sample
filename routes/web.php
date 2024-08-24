@@ -13,11 +13,17 @@ Route::get('/configuring', function () {
 Route::get('/callingFunction', function () {
     return view('layout.callingFunction');
 });
+Route::get('/updateCalling',function (){
+    return view('layout.updateCallingFunction');
+});
 Route::get('/updateConfiguring', function () {
     return view('layout.updateConfiguring');
 });
 Route::get('/includeFiles', function () {
     return view('layout.includeFiles');
+});
+Route::get('/encoding',function (){
+    return view('layout.encoding');
 });
 Route::get('/apis/{id}', [ApiController::class,'getApiDetails']);
 Route::post('/sendRequest', [ApiController::class,'sendRequest']);
