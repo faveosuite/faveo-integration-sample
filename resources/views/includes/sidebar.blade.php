@@ -92,10 +92,10 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ url('apiCategories') }}" class="nav-link">
+                                <a href="{{ url('apiList') }}" class="nav-link">
                                     <i class="nav-icon fas fa-layer-group"></i>
                                     <p>
-                                        Api Categories
+                                        Integration Apis
                                     </p>
                                 </a>
                             </li>

@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper px-4 py-2">
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
@@ -99,6 +99,7 @@
                         <td>Uninstalls license, so user can re-install script on different domain. Script stops working immediately.</td>
                     </tr></tbody>
                 </table>
+                <hr class="my-4">
                 <p><b>Function</b>: <code>aplCheckSettings()</code>.<br>
                     <b>Description</b>: verifies Auto PHP Licenser core settings defined by developer and returns an array with error messages in case of error. Doesn't return anything when no errors are found.<br>
                     <b>Arguments</b>: <code>N/A</code>.<br>
@@ -115,7 +116,7 @@ if (!empty($apl_core_notifications)) //invalid settings
     exit();
     }
 </pre><br><br>
-
+                <hr class="my-4">
 
                 <p><b>Function</b>: <code>aplCheckConnection()</code>.<br>
                     <b>Description</b>: checks if connection to your server (where Auto PHP Licenser web module is installed) can be established and returns an array with error messages in case of error. Doesn't return anything when no errors are found.<br>
@@ -133,7 +134,7 @@ if (!empty($apl_connection_notifications)) //protected script can't connect to y
     }
 </pre><br><br>
 
-
+                <hr class="my-4">
                 <p><b>Function</b>: <code>aplCheckUserInput()</code>.<br>
                     <b>Description</b>: verifies data submitted by user during license installation and returns an array with error messages in case of error. Doesn't return anything when no errors are found.<br>
                     <b>Arguments</b>: <code>$ROOT_URL</code>, <code>$CLIENT_EMAIL</code>, <code>$LICENSE_CODE</code>.<br>
@@ -151,7 +152,7 @@ if (!empty($apl_user_input_notifications)) //invalid data submitted
     }
 </pre><br><br>
 
-
+                <hr class="my-4">
                 <p><b>Function</b>: <code>aplCheckData($MYSQLI_LINK)</code>.<br>
                     <b>Description</b>: checks if additional data (such as license key and signature) is valid (not modified by user). Returns true on success, false otherwise.<br>
                     <b>Arguments</b>: <code>$MYSQLI_LINK</code> (only when MySQL database is used).<br>
@@ -168,7 +169,7 @@ if (!aplCheckData($GLOBALS[&quot;mysqli&quot;])) //internal data was modified by
     }
 </pre><br><br>
 
-
+                <hr class="my-4">
                 <p><b>Function</b>: <code>aplDeleteData($MYSQLI_LINK)</code>.<br>
                     <b>Description</b>: instantly deletes all files and MySQL data of protected script. Doesn't return anything.<br>
                     <b>Arguments</b>: <code>$MYSQLI_LINK</code> (only when MySQL database is used).<br>
@@ -184,7 +185,7 @@ if (user did something really wrong...) //delete everything
     exit();
     }
 </pre><br><br>
-
+                <hr class="my-4">
 
                 <p><b>Function</b>: <code>aplInstallLicense($ROOT_URL, $CLIENT_EMAIL, $LICENSE_CODE, $MYSQLI_LINK)</code>.<br>
                     <b>Description</b>: installs license (only if license exists, is active, and meets installation requirements) or aborts installation for non-licensed users. Activates script on success, returns an array with error messages otherwise.<br>
@@ -209,7 +210,7 @@ else //Other case returned - operation failed
     }
 </pre><br><br>
 
-
+                <hr class="my-4">
                 <p><b>Function</b>: <code>aplVerifyLicense($MYSQLI_LINK, $FORCE_VERIFICATION)</code>.<br>
                     <b>Description</b>: verifies license status (only if license exists, is active, and meets installation requirements) or aborts execution when license is invalid. Allows using script on success, returns error message otherwise (optionally, deletes user data when license is cancelled).<br>
                     <b>Arguments</b>: <code>$MYSQLI_LINK</code> (only when MySQL database is used), <code>$FORCE_VERIFICATION</code> (<code>1</code> to force verification).<br>
@@ -232,7 +233,7 @@ else //Other case returned - operation failed
     exit();
     }
 </pre><br><br>
-
+                <hr class="my-4">
 
                 <p><b>Function</b>: <code>aplVerifySupport($MYSQLI_LINK)</code>.<br>
                     <b>Description</b>: verifies if user is eligible for support (when support expiration date is set in license).<br>
@@ -256,7 +257,7 @@ else //Other case returned - operation failed
     }
 </pre><br><br>
 
-
+                <hr class="my-4">
                 <p><b>Function</b>: <code>aplVerifyUpdates($MYSQLI_LINK)</code>.<br>
                     <b>Description</b>: verifies if user is eligible for updates (when updates expiration date is set in license).<br>
                     <b>Arguments</b>: <code>$MYSQLI_LINK</code> (only when MySQL database is used).<br>
@@ -278,7 +279,7 @@ else //Other case returned - operation failed
     exit();
     }
 </pre><br><br>
-
+                <hr class="my-4">
 
                 <p><b>Function</b>: <code>aplUpdateLicense($MYSQLI_LINK)</code>.<br>
                     <b>Description</b>: Updates license if IP address of script was changed, so script continues to work on new IP.<br>
@@ -303,7 +304,7 @@ else //Other case returned - operation failed
     }
 </pre><br><br>
 
-
+                <hr class="my-4">
                 <p ><b>Function</b>: <code>aplUninstallLicense($MYSQLI_LINK)</code>.<br>
                     <b>Description</b>: Uninstalls license, so user can re-install script on different domain. Script stops working immediately.<br>
                     <b>Arguments</b>: <code>$MYSQLI_LINK</code> (only when MySQL database is used).<br>

@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="content-wrapper px-4 py-2">
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
@@ -78,7 +78,7 @@
                         </tbody>
                     </table><br><br>
 
-
+                <hr class="my-4">
                     <p ><b>Function</b>: <code>ausCheckSettings()</code>.<br>
                         <b>Description</b>: verifies Agora License Manager Script core settings defined by developer and returns an array with error messages in case of error. Doesn't return anything when no errors are found.<br>
                         <b>Arguments</b>: <code>N/A</code>.<br>
@@ -95,7 +95,7 @@ if (!empty($aus_core_notifications)) //invalid settings
     exit();
     }
 </pre><br><br>
-
+                <hr class="my-4">
 
                     <p ><b>Function</b>: <code>ausGetVersion($VERSION_NUMBER)</code>.<br>
                         <b>Description</b>: parses full (except the most sensitive) information of specified version for particular product from Agora License Manager Script web module and returns an array with product and version details.<br>
@@ -117,7 +117,7 @@ else //Other case returned - operation failed
     }
 </pre><br><br>
 
-
+                <hr class="my-4">
                     <p ><b>Function</b>: <code>ausGetAllVersions()</code>.<br>
                         <b>Description</b>: parses basic information of all available versions for particular product from Agora License Manager Script web module and returns an array with product details and sub-array with version details.<br>
                         <b>Arguments</b>: <code>N/A</code>.<br>
@@ -140,7 +140,7 @@ else //Other case returned - operation failed
     }
 </pre><br><br>
 
-
+                <hr class="my-4">
                     <p ><b>Function</b>: <code>ausDownloadFile($FILE_TYPE, $VERSION_NUMBER)</code>.<br>
                         <b>Description</b>: downloads and extracts installation/upgrade archive of specified version for particular product (optionally, deletes downloaded archive after extracting files).<br>
                         <b>Arguments</b>: <code>$FILE_TYPE</code> (<code>version_install_file</code> - installation files, <code>version_install_query</code> - installation MySQL query, <code>version_upgrade_file</code> - upgrade files, <code>version_upgrade_query</code> - upgrade MySQL query), <code>$VERSION_NUMBER</code> (only when old version is needed).<br>
@@ -162,7 +162,7 @@ else //Other case returned - operation failed
     echo &quot;Your installation could not be updated because of this reason: &quot;.$download_notifications_array['notification_text'];
     }
 </pre><br><br>
-
+                <hr class="my-4">
 
                     <p ><b>Function</b>: <code>ausFetchQuery($QUERY_TYPE, $VERSION_NUMBER)</code>.<br>
                         <b>Description</b>: fetches installation/upgrade raw MySQL query of specified version for particular product.<br>
@@ -189,7 +189,7 @@ else //Other case returned - operation failed
     echo &quot;Your database could not be updated because of this reason: &quot;.$query_notifications_array['notification_text'];
     }
 </pre><br><br>
-
+                <hr class="my-4">
 
                     <p ><b>Function</b>: <code>ausDeleteFileDirectory($ROOT_DIRECTORY, $FILES_ARRAY)</code>.<br>
                         <b>Description</b>: recursively deletes specified files and directories in particular location and returns number of deleted records.<br>
@@ -213,7 +213,7 @@ else //Other value returned - operation failed
     echo &quot;Specified files/directories could not be deleted&quot;;
     }
 </pre><br><br>
-
+                <hr class="my-4">
 
                     <p >A quick note on array's key <code>notification_case</code> returned by <code>ausGetVersion()</code> and <code>ausDownloadFile()</code> functions. The only <code>notification_case</code> value you should accept is <code>notification_operation_ok</code>. If any other case is returned, you should abort script execution and/or display additional notifications (<code>notification_text</code>) accordingly.<br><br>
                         For your convenience, the full list of possible <code>notification_case</code> values and their meanings is below:</p>

@@ -27,5 +27,4 @@ Route::get('/encoding',function (){
 });
 Route::get('/apis/{id}', [ApiController::class,'getApiDetails']);
 Route::post('/sendRequest', [ApiController::class,'sendRequest']);
-Route::get('/apiList/{category_id}',[ApiController::class,'listApi']);
-Route::get('/apiCategories',[ApiController::class,'getApiCategories']);
+Route::get('/apiList',[ApiController::class,'listApi']);
