@@ -20,6 +20,10 @@
     <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.extra-components.css") }}>
     <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.light.css") }}>
     <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.pages.css") }}>
-
+<style>
+    code{
+        color: #007bff;
+    }
+</style>
 
 </head>

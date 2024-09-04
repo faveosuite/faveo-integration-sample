@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('api_info', function (Blueprint $table) {
             $table->id();
-            $table->integer('category_id')->index()->nullable();
             $table->string('name');
             $table->string('endpoint');
             $table->string('method');

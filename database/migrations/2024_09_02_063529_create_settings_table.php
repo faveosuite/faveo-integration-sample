@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('api_categories', function (Blueprint $table) {
-            $table->id('category_id');
-            $table->string('category');
-            $table->text('description')->nullable();
+        Schema::create('settings', function (Blueprint $table) {
+            $table->id();
+            $table->string('license_manager_url')->nullable();
+            $table->string('billing_url')->nullable();
+            $table->string('secret_key')->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('api_categories');
+        Schema::dropIfExists('settings');
     }
 };
