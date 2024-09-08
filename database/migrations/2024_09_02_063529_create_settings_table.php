@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('license_manager_url')->nullable();
-            $table->string('billing_url')->nullable();
-            $table->string('secret_key')->nullable();
             $table->timestamps();
         });
     }

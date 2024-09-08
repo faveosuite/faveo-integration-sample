@@ -19,9 +19,19 @@
             </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
+
+
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
+                <div class="alert-container" id="alert" style="display: none;">
+                    <div class="alert alert-success">
+                        <button type="button" class="close" id="alert_close">×</button>
+                        <div id="alert-message">
+                            <i class="fa fa-check-circle alert-icon"></i>&nbsp; <span></span>
+                        </div>
+                    </div>
+                </div>
                 <div class="card card-light">
                     <div class="card-header">
                         <h3 class="card-title">Api Settings</h3>
@@ -38,22 +48,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <div class="protocol protocol-settings">
-                            <div class="row">
-                                <div class="col-sm-6 form-group form-field-template" >
-                                    <label for="api-secret">Api Secret</label>
-                                    <input type="text" class="form-control" name="api-secret" placeholder="Enter API Secret key">
+                        <div class="card-body">
+                            <div class="protocol protocol-settings">
+                                <div class="row">
+                                    <div class="col-sm-6 form-group form-field-template" >
+                                        <label for="api-url" >License Manager URL</label>
+                                        <input type="url" class="form-control" name="license_manager_url" placeholder="Enter URL" id="license_manager_url" pattern="https?://.+" required>
+                                        <span id="license-error" class="error invalid-feedback"></span>
+                                    </div>
+                                    <!---->
                                 </div>
-                                <div class="col-sm-6 form-group form-field-template" >
-                                    <label for="api-url">License Manager URL</label>
-                                    <input type="text" class="form-control" name="api-url" placeholder="Enter URL">
-                                </div>
-                                <!---->
                             </div>
                         </div>
-                    </div>
-                    <div class="card-footer"><button class="btn btn-primary mr-2"><i class="fas fa-save"></i> Save</button></div>
+
+                        <div class="card-footer"><button class="btn btn-primary mr-2 toastrDefaultSuccess" id="save_button"><i class="fas fa-save"></i> Save</button></div>
                 </div>
             </div><!-- /.container-fluid -->
         </div>
@@ -170,4 +178,68 @@
 
         .fw-500 { font-weight: 500 !important; }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function fetchSettings() {
+                sendGetRequest(getApiUrl('/getSettings'))
+                    .then(data => {
+                        const inputElement = document.getElementById('license_manager_url');
+                        inputElement.value = data.data.license_manager_url || ''; // Fallback to empty string
+                    })
+                    .catch(error => {
+                        console.error('Error fetching data and setting input value:', error);
+                    });
+            }
+
+            function checkUrlAndDisplayError() {
+                const inputElement = document.getElementById('license_manager_url');
+                const errorSpan = document.getElementById('license-error');
+                const url = inputElement.value;
+
+                if (!isUrlValid(url)) {
+                    inputElement.classList.add('is-invalid');
+                    errorSpan.textContent = 'Please enter a valid URL';
+                    errorSpan.style.display = 'block';
+                } else {
+                    inputElement.classList.remove('is-invalid');
+                    errorSpan.style.display = 'none';
+                }
+            }
+
+            function saveSettings() {
+                checkUrlAndDisplayError();
+
+                const inputElement = document.getElementById('license_manager_url');
+                const errorSpan = document.getElementById('license-error');
+                const data = { license_manager_url: inputElement.value };
+
+                if (inputElement.classList.contains('is-invalid')) {
+                    return; // Prevent saving if URL is invalid
+                }
+
+                sendPostRequest(getApiUrl('/updateApiSetting'), data)
+                    .then(responseData => {
+                        // Set the message dynamically
+                        $('#alert-message span').text(responseData.message); // Adjust according to your response structure
+
+                        // Show the alert
+                        $('#alert').show();
+
+                        // Hide the alert after 3 seconds
+                        setTimeout(function() {
+                            $('#alert').fadeOut(); // You can use .hide() if you prefer
+                        }, 3000);
+                    })
+                    .catch(error => {
+                        inputElement.classList.add('is-invalid');
+                        errorSpan.textContent = error.message.license_manager_url;
+                        errorSpan.style.display = 'block';
+                    });
+            }
+
+            document.getElementById('save_button').addEventListener('click', saveSettings);
+            fetchSettings();
+        });
+
+    </script>
 @endsection

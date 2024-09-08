@@ -1,4 +1,4 @@
-<div class="content-wrapper">
+<div class="content-wrapper px-4 py-2">
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -32,7 +32,7 @@
                                     <span class="badge badge-primary">{{ $method }}</span>
                                 </div>
                                 <div class="col-11">
-                                    <div class="text-muted" >{{ $endpoint }}</div>
+                                    <div class="text-muted" >{{  \App\Models\Setting::where('id',1)->value('license_manager_url') }}</div>
                                 </div>
                             </div>
 
@@ -76,6 +76,7 @@
                             <div class="row mt-3">
                                 <div class="col">
                                     <label class="form-label">Example Parameters</label>
+                                    <a class="ml-2" href="" id="generate">( Generate Parameters )</a>
                                     <form id="parametersForm">
                                         <table class="table table-bordered bg-light">
                                             <thead>
@@ -84,13 +85,19 @@
                                                 <th>Values</th>
                                             </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody id="parameter-table-body">
                                             @foreach(json_decode($parameters, true) as $parameter)
                                                 <tr>
                                                     <td>{{ $parameter['param'] }}</td>
-                                                    <td>
-                                                        <input type="text" id="{{ $parameter['param'] }}" name="{{ $parameter['param'] }}" value="{{ $parameter['values'] }}">
-                                                    </td>
+                                                    @if($parameter['param'] == 'product_id' || $parameter['param'] == 'client_email' || $parameter['param'] == 'license_code')
+                                                        <td>
+                                                            <input class="input-group border-transparent" type="text" id="{{ $parameter['param'] }}" name="{{ $parameter['param'] }}" value="{{ $parameter['values'] }}">
+                                                        </td>
+                                                    @else
+                                                        <td>
+                                                            <p class="container-fluid" id="{{ $parameter['param'] }}"></p>
+                                                        </td>
+                                                    @endif
                                                 </tr>
                                             @endforeach
                                             </tbody>
@@ -128,44 +135,96 @@
     <!-- /.content -->
 </div>
 <script>
+    document.getElementById('generate').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        generate();
+    });
+
     function submit(method, parameter) {
-        let data = {};
+        let data = parameter !== null ? getFormData() : null;
 
         if (parameter !== null) {
-            // Get form data
-            const form = document.getElementById('parametersForm');
-            const formData = new FormData(form);
+            fetchData('/hashGenerator', data)
+                .then(responseData => {
+                    data['installation_hash'] = responseData.installation_hash;
+                    data['license_signature'] = responseData.license_signature;
+                    data['root_url'] = responseData.root_url;
+                    data['connection_hash'] = responseData.connection_hash;
 
-            // Convert FormData to an object
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
+                    postRequest(method, data);
+                })
+                .catch(error => {
+                    console.error('There was an error!', error);
+                });
         } else {
-            data = null; // Set data to null if parameter is null
+            postRequest(method, data);
         }
+    }
+    function updateElement(id, value) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.innerHTML = value;
+        }
+    }
+    function generate() {
+        let data = getFormData();
+        fetchData('/hashGenerator', data)
+            .then(data => {
+                updateElement('connection_hash', data.connection_hash);
+                updateElement('installation_hash', data.installation_hash);
+                updateElement('license_signature', data.license_signature);
+                updateElement('root_url', data.root_url);
 
-        const post = data ? new URLSearchParams(data).toString() : '';
-        console.log(post);
+            })
+            .catch(error => {
+                console.error('There was an error!', error);
+            });
+    }
 
-        const postData = {
-            method: method,
-            post: post,
-            endpoint: document.getElementById('endpoint').innerText // Ensure $endpoint is JSON encoded
-        };
+    function getFormData() {
+        const form = document.getElementById('parametersForm');
+        const formData = new FormData(form);
+        let data = {};
+        formData.forEach((value, key) => {
+            data[key] = value;
+        });
+        return data;
+    }
 
-        console.log(postData);
-
-        fetch('/integration/public/sendRequest', {
+    function fetchData(url, data) {
+        return fetch(getApiUrl(url), {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}' // Include CSRF token if required by your backend
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(responseData => responseData.data)
+            .catch(error => {
+                console.error('There was an error!', error);
+            });
+    }
+
+    function postRequest(method, data) {
+        const postData = {
+            method: method,
+            post: data,
+            endpoint: document.getElementById('endpoint').innerText // Ensure $endpoint is JSON encoded
+        };
+
+        fetch(getApiUrl('/sendRequest'), {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
             },
             body: JSON.stringify(postData)
         })
             .then(response => response.json())
             .then(data => {
-                const formattedJson = JSON.stringify(data, null, 2);
+                const formattedJson = JSON.stringify(data.message, null, 2);
                 const responseDiv = document.getElementById('responseDiv');
                 responseDiv.innerHTML = `<pre>${escapeHtml(formattedJson)}</pre>`;
             })

@@ -43,7 +43,7 @@
                         <code>
 &lt;?php
 
-//MAIN CONFIG FILE OF AUTO PHP LICENSER. CAN BE EDITED MANUALLY OR GENERATED USING Extra Tools > Configuration Generator TAB IN AUTO PHP LICENSER DASHBOARD. THE FILE MUST BE INCLUDED IN YOUR SCRIPT BEFORE YOU PROVIDE IT TO USER.
+//MAIN CONFIG FILE OF Agora License Manager. CAN BE EDITED MANUALLY OR GENERATED USING Extra Tools > Configuration Generator TAB IN Agora License Manager DASHBOARD. THE FILE MUST BE INCLUDED IN YOUR SCRIPT BEFORE YOU PROVIDE IT TO USER.
 
 
 //-----------<span class="nt">BASIC SETTINGS</span>-----------//
@@ -52,10 +52,10 @@
 //Random salt used for encryption. It should contain random symbols (16 or more recommended) and be different for each application you want to protect. Cannot be modified after installing script.
 <span class="nt">define</span>(<span class="s">"APL_SALT"</span>, <span class="s">"some_random_text"</span>);
 
-//The URL (without / at the end) where Auto PHP Licenser from /WEB directory is installed on your server. No matter how many applications you want to protect, a single installation is enough.
+//The URL (without / at the end) where Agora License Manager from /WEB directory is installed on your server. No matter how many applications you want to protect, a single installation is enough.
 <span class="nt">define</span>(<span class="s">"APL_ROOT_URL"</span>, <span class="s">"https://www.demo.license.com/apl"</span>);
 
-//Unique numeric ID of product that needs to be licensed. Can be obtained by going to Products > View Products tab in Auto PHP Licenser dashboard and selecting product to be licensed. At the end of URL, you will see something like products_edit.php?product_id=NUMBER, where NUMBER is unique product ID. Cannot be modified after installing script.
+//Unique numeric ID of product that needs to be licensed. Can be obtained by going to Products > View Products tab in Agora License Manager dashboard and selecting product to be licensed. At the end of URL, you will see something like products_edit.php?product_id=NUMBER, where NUMBER is unique product ID. Cannot be modified after installing script.
 <span class="nt">define</span>(<span class="s">"APL_PRODUCT_ID"</span>, <span class="nt">1</span>);
 
 //Time period (in days) between automatic license verifications. The lower the number, the more often license will be verified, but if many end users use your script, it can cause extra load on your server. Available values are between 1 and 365. Usually 7 or 14 days are the best choice.
@@ -98,16 +98,16 @@
 //Secret key used to verify if configuration file included in your script is genuine (not replaced with 3rd party files). It can contain any number of random symbols and should be different for each application you want to protect. You should also change its name from "APL_INCLUDE_KEY_CONFIG" to something else, let's say "MY_CUSTOM_SECRET_KEY"
 <span class="nt">define</span>(<span class="s">"APL_INCLUDE_KEY_CONFIG"</span>, <span class="s">"some_random_text"</span>);
 
-//IP address of your Auto PHP Licenser installation. If IP address is set, script will always check if "APL_ROOT_URL" resolves to this IP address (very useful against users who may try blocking or nullrouting your domain on their servers). However, use it with caution because if IP address of your server is changed in future, old installations of protected script will stop working (you will need to update this file with new IP and send updated file to end user). If you want to verify licensing server, but don't want to lock it to specific IP address, you can use APL_ROOT_NAMESERVERS option (because nameservers change is unlikely).
+//IP address of your Agora License Manager installation. If IP address is set, script will always check if "APL_ROOT_URL" resolves to this IP address (very useful against users who may try blocking or nullrouting your domain on their servers). However, use it with caution because if IP address of your server is changed in future, old installations of protected script will stop working (you will need to update this file with new IP and send updated file to end user). If you want to verify licensing server, but don't want to lock it to specific IP address, you can use APL_ROOT_NAMESERVERS option (because nameservers change is unlikely).
 <span class="nt">define</span>(<span class="s">"APL_ROOT_IP"</span>, <span class="s">""</span>);
 
-//Nameservers of your domain with Auto PHP Licenser installation (only works with domains and NOT subdomains). If nameservers are set, script will always check if "APL_ROOT_NAMESERVERS" match actual DNS records (very useful against users who may try blocking or nullrouting your domain on their servers). However, use it with caution because if nameservers of your domain are changed in future, old installations of protected script will stop working (you will need to update this file with new nameservers and send updated file to end user). Nameservers should be formatted as an array. For example: array("ns1.license.com", "ns2.license.com"). Nameservers are NOT CAse SensitIVE.
+//Nameservers of your domain with Agora License Manager installation (only works with domains and NOT subdomains). If nameservers are set, script will always check if "APL_ROOT_NAMESERVERS" match actual DNS records (very useful against users who may try blocking or nullrouting your domain on their servers). However, use it with caution because if nameservers of your domain are changed in future, old installations of protected script will stop working (you will need to update this file with new nameservers and send updated file to end user). Nameservers should be formatted as an array. For example: array("ns1.license.com", "ns2.license.com"). Nameservers are NOT CAse SensitIVE.
 //<span class="nt">define</span>(<span class="s">"APL_ROOT_NAMESERVERS"</span>, <span class="nt">array</span>(<span class="s">"ns1.license.com"</span>, <span class="s">"ns2.license.com"</span>)); <span class="nt">//ATTENTION</span>! <span class="nt">THIS</span> <span class="nt">FEATURE</span> <span class="nt">ONLY</span> <span class="nt">WORKS</span> <span class="nt">WITH</span> <span class="nt">PHP</span> <span class="nt">7.0</span> <span class="nt">AND</span> <span class="nt">HIGHER</span>, <span class="nt">ONLY</span> <span class="nt">UNCOMMENT</span> <span class="nt">THIS</span> <span class="nt">LINE</span> <span class="nt">IF</span> <span class="nt">PROTECTED</span> <span class="nt">SCRIPT</span> <span class="nt">WILL</span> <span class="nt">RUN</span> <span class="nt">ON</span> <span class="nt">COMPATIBLE</span> <span class="nt">SERVER</span>!
 
-//When option set to "YES", script files and MySQL data will be deleted when illegal usage is detected. This is very useful against users who may try using pirated software; if someone shares his license with 3rd parties (by sending it to a friend, posting on warez forums, etc.) and you cancel this license, Auto PHP Licenser will try to delete all script files and any data in MySQL database for everyone who uses cancelled license. For obvious reasons, data will only be deleted if license is cancelled. If license is invalid or expired, no data will be modified. Use at your own risk!
+//When option set to "YES", script files and MySQL data will be deleted when illegal usage is detected. This is very useful against users who may try using pirated software; if someone shares his license with 3rd parties (by sending it to a friend, posting on warez forums, etc.) and you cancel this license, Agora License Manager will try to delete all script files and any data in MySQL database for everyone who uses cancelled license. For obvious reasons, data will only be deleted if license is cancelled. If license is invalid or expired, no data will be modified. Use at your own risk!
 <span class="nt">define</span>(<span class="s">"APL_DELETE_CANCELLED"</span>, <span class="s">""</span>);
 
-//When option set to "YES", script files and MySQL data will be deleted when cracking attempt is detected. This is very useful against users who may try cracking software; if some unauthorized changes in core functions are detected, Auto PHP Licenser will try to delete all script files and any data in MySQL database. Use at your own risk!
+//When option set to "YES", script files and MySQL data will be deleted when cracking attempt is detected. This is very useful against users who may try cracking software; if some unauthorized changes in core functions are detected, Agora License Manager will try to delete all script files and any data in MySQL database. Use at your own risk!
 <span class="nt">define</span>(<span class="s">"APL_DELETE_CRACKED"</span>, <span class="s">"YES"</span>);
 
 //When option set to "YES", ALL files and MySQL data will be deleted when cracking attempt is detected. This option only works when APL_DELETE_CRACKED is set to "YES". The main difference between standard (used by default when APL_DELETE_CRACKED is set to "YES") and GOD mode is that GOD mode deletes not only script files, but also all other files from user's website (including other scripts, custom user files, etc.)
@@ -127,15 +127,15 @@
 
 
 <span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_SALT"</span>, <span class="s">"Configuration error: invalid or default encryption salt"</span>);
-<span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_ROOT_URL"</span>, <span class="s">"Configuration error: invalid root URL of Auto PHP Licenser installation"</span>);
+<span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_ROOT_URL"</span>, <span class="s">"Configuration error: invalid root URL of Agora License Manager installation"</span>);
 <span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_PRODUCT_ID"</span>, <span class="s">"Configuration error: invalid product ID"</span>);
 <span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_VERIFICATION_PERIOD"</span>, <span class="s">"Configuration error: invalid license verification period"</span>);
 <span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_STORAGE"</span>, <span class="s">"Configuration error: invalid license storage option"</span>);
 <span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_TABLE"</span>, <span class="s">"Configuration error: invalid MySQL table name to store license signature"</span>);
 <span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_LICENSE_FILE"</span>, <span class="s">"Configuration error: invalid license file location (or file not writable)"</span>);
-<span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_ROOT_IP"</span>, <span class="s">"Configuration error: invalid IP address of your Auto PHP Licenser installation"</span>);
-<span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_ROOT_NAMESERVERS"</span>, <span class="s">"Configuration error: invalid nameservers of your Auto PHP Licenser installation"</span>);
-<span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_DNS"</span>, <span class="s">"License error: actual IP address and/or nameservers of your Auto PHP Licenser installation don't match specified IP address and/or nameservers"</span>);
+<span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_ROOT_IP"</span>, <span class="s">"Configuration error: invalid IP address of your Agora License Manager installation"</span>);
+<span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_ROOT_NAMESERVERS"</span>, <span class="s">"Configuration error: invalid nameservers of your Agora License Manager installation"</span>);
+<span class="nt">define</span>(<span class="s">"APL_CORE_NOTIFICATION_INVALID_DNS"</span>, <span class="s">"License error: actual IP address and/or nameservers of your Agora License Manager installation don't match specified IP address and/or nameservers"</span>);
 
 //-----------<span class="nt">SOME</span> <span class="nt">EXTRA</span> <span class="nt">STUFF</span>. <span class="nt">SHOULD</span> <span class="nt">NEVER</span> <span class="nt">BE</span> <span class="nt">REMOVED</span> <span class="nt">OR</span> <span class="nt">MODIFIED</span>-----------//
 <span class="nt">define</span>(<span class="s">"APL_DIRECTORY"</span>, <span class="nt">__DIR__</span>);

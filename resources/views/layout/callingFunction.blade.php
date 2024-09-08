@@ -27,10 +27,10 @@
                 <blockquote class="quote-info mt-0">
                     <h5>Important!</h5>
                     <p>$MYSQLI_LINK is only needed if your script requires MySQL connection.</p>
-                    <p>$MYSQLI_LINK should always be local MySQL connection on user's server (never include MySQL credentials of your Auto PHP Licenser installation).</p>
+                    <p>$MYSQLI_LINK should always be local MySQL connection on user's server (never include MySQL credentials of your Agora License Manager installation).</p>
                 </blockquote>
                 <p>
-                    In order to protect your application, you need to call one or more of Auto PHP Licenser functions inside your code. Here's the list of available functions (including type of data each function returns), their descriptions and working examples. Functions marked by <code>*</code> must be called for basic protection to work. Other functions are optional.
+                    In order to protect your application, you need to call one or more of Agora License Manager functions inside your code. Here's the list of available functions (including type of data each function returns), their descriptions and working examples. Functions marked by <code>*</code> must be called for basic protection to work. Other functions are optional.
                 </p>
                 <table class="table table-bordered bg-light">
                     <thead>
@@ -51,7 +51,7 @@
                         <td><code>aplCheckConnection</code></td>
                         <td><code>N/A</code></td>
                         <td>array</td>
-                        <td>Checks if connection to your server (where Auto PHP Licenser web module is installed) can be established.</td>
+                        <td>Checks if connection to your server (where Agora License Manager web module is installed) can be established.</td>
                     </tr><tr >
                         <td><code>aplCheckUserInput</code></td>
                         <td><code>$ROOT_URL</code>, <code>$CLIENT_EMAIL</code>, <code>$LICENSE_CODE</code></td>
@@ -101,7 +101,7 @@
                 </table>
                 <hr class="my-4">
                 <p><b>Function</b>: <code>aplCheckSettings()</code>.<br>
-                    <b>Description</b>: verifies Auto PHP Licenser core settings defined by developer and returns an array with error messages in case of error. Doesn't return anything when no errors are found.<br>
+                    <b>Description</b>: verifies Agora License Manager core settings defined by developer and returns an array with error messages in case of error. Doesn't return anything when no errors are found.<br>
                     <b>Arguments</b>: <code>N/A</code>.<br>
                     <b>Returned data</b>: <code>array</code> with errors (if any).<br>
                     <b>Should be used in</b>: <code>any file</code>, optional.<br><br>
@@ -119,7 +119,7 @@ if (!empty($apl_core_notifications)) //invalid settings
                 <hr class="my-4">
 
                 <p><b>Function</b>: <code>aplCheckConnection()</code>.<br>
-                    <b>Description</b>: checks if connection to your server (where Auto PHP Licenser web module is installed) can be established and returns an array with error messages in case of error. Doesn't return anything when no errors are found.<br>
+                    <b>Description</b>: checks if connection to your server (where Agora License Manager web module is installed) can be established and returns an array with error messages in case of error. Doesn't return anything when no errors are found.<br>
                     <b>Arguments</b>: <code>N/A</code>.<br>
                     <b>Returned data</b>: <code>array</code> with errors (if any).<br>
                     <b>Should be used in</b>: <code>any file</code>, optional.<br><br>
@@ -217,12 +217,12 @@ else //Other case returned - operation failed
                     <b>Returned data</b>: <code>array</code> with keys <code>notification_case</code> and <code>notification_text</code>.<br>
                     <b>Should be used in</b>: <code>all files</code> (except script installer when no license signature is stored yet) for maximum protection, or at least the most important files of your script.<br><br>
                     <b>Additional notes</b>: <i>Array's key <code>notification_case</code> value will always be <code>notification_license_ok</code> when operation succeeds.<br>
-                        There might be some cases when you don't want X days/weeks/months/years to pass since last verification, and need to force license validation right now. This way, set <code>$FORCE_VERIFICATION</code> value to <code>1</code> and Auto PHP Licenser will connect to your server to force license validation. Use this option in extraordinary situations only, otherwise protected script will connect to your server every time it's in use (which means high server load).</i><br><br>
+                        There might be some cases when you don't want X days/weeks/months/years to pass since last verification, and need to force license validation right now. This way, set <code>$FORCE_VERIFICATION</code> value to <code>1</code> and Agora License Manager will connect to your server to force license validation. Use this option in extraordinary situations only, otherwise protected script will connect to your server every time it's in use (which means high server load).</i><br><br>
                     <b>Example</b>:</p>
                 <pre>
 $GLOBALS[&quot;mysqli&quot;]=mysqli_connect($db_host, $db_user, $db_pass, $db_name, $db_port); //establish connection to local MySQL database
 
-$license_notifications_array=aplVerifyLicense($GLOBALS[&quot;mysqli&quot;]); //verify license (Auto PHP Licenser will determine when connection to your server is needed)
+$license_notifications_array=aplVerifyLicense($GLOBALS[&quot;mysqli&quot;]); //verify license (Agora License Manager will determine when connection to your server is needed)
 if ($license_notifications_array['notification_case']==&quot;notification_license_ok&quot;) //'notification_license_ok' case returned - operation succeeded
     {
     //display some success message or simply do nothing (so user can continue using his script)
