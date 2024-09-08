@@ -126,3 +126,35 @@ function appendUrl($baseUrl, $endpoint) {
     // Ensure there's only one slash between the base URL and the endpoint
     return rtrim($baseUrl, '/') . '/' . ltrim($endpoint, '/');
 }
+
+function ausGenerateScriptSignature($product_id,$product_key,$root_url)
+{
+    $script_signature = '';
+    $root_ips_array = gethostbynamel(ausGetRawDomain($root_url));
+
+    if (! empty($root_ips_array)) { //IP(s) resolved successfully
+        $script_signature = hash('sha256', gmdate('Y-m-d').$product_id.$product_key.implode('', $root_ips_array));
+    }
+
+    return $script_signature;
+}
+function ausGetRawDomain($url)
+{
+    $raw_domain = '';
+
+    if (! empty($url)) {
+        $url_array = parse_url($url);
+        if (empty($url_array['scheme'])) { //in case no scheme was provided in url, it will be parsed incorrectly. add http:// and re-parse
+            $url = 'http://'.$url;
+            $url_array = parse_url($url);
+        }
+
+        if (! empty($url_array['host'])) {
+            $raw_domain = $url_array['host'];
+
+            $raw_domain = trim(str_ireplace('www.', '', filter_var($raw_domain, FILTER_SANITIZE_URL)));
+        }
+    }
+
+    return $raw_domain;
+}
