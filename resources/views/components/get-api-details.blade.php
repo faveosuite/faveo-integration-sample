@@ -89,7 +89,7 @@
                                             @foreach(json_decode($parameters, true) as $parameter)
                                                 <tr>
                                                     <td>{{ $parameter['param'] }}</td>
-                                                    @if($parameter['param'] == 'product_id' || $parameter['param'] == 'client_email' || $parameter['param'] == 'license_code')
+                                                    @if($parameter['param'] == 'product_id' || $parameter['param'] == 'client_email' || $parameter['param'] == 'license_code' || $parameter['param'] == 'product_key' || $parameter['param'] == 'version_number' || $parameter['param'] == 'user_local_path' || $parameter['param'] == 'query_type' || $parameter['param'] == 'file_type' )
                                                         <td>
                                                             <input class="input-group border-transparent" type="text" id="{{ $parameter['param'] }}" name="{{ $parameter['param'] }}" value="{{ $parameter['values'] }}">
                                                         </td>
@@ -174,6 +174,7 @@
                 updateElement('installation_hash', data.installation_hash);
                 updateElement('license_signature', data.license_signature);
                 updateElement('root_url', data.root_url);
+                updateElement('script_signature', data.script_signature);
 
             })
             .catch(error => {
