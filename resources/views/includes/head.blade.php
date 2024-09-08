@@ -17,13 +17,13 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href={{ asset("/dist/css/adminlte.css") }}>
-    <link rel="stylesheet" href={{ asset("/dist/css/highlighter.css") }}>
-    <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.components.css") }}>
-    <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.core.css") }}>
-    <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.extra-components.css") }}>
-    <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.light.css") }}>
-    <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.pages.css") }}>
+    <link rel="stylesheet" href={{ asset("/themes/css/adminlte.min.css") }}>
+    <link rel="stylesheet" href={{ asset("/themes/css/highlighter.css") }}>
+    <link rel="stylesheet" href={{ asset("/themes/css/adminlte.components.min.css") }}>
+    <link rel="stylesheet" href={{ asset("/themes/css/adminlte.core.min.css") }}>
+    <link rel="stylesheet" href={{ asset("/themes/css/adminlte.extra-components.min.css") }}>
+    <link rel="stylesheet" href={{ asset("/themes/css/adminlte.light.min.css") }}>
+    <link rel="stylesheet" href={{ asset("/themes/css/adminlte.pages.min.css") }}>
     <script src="{{ asset('/Helper/helpers.js') }}"></script>
 <style>
     code{
