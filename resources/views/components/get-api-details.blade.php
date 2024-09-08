@@ -150,7 +150,7 @@
                     data['license_signature'] = responseData.license_signature;
                     data['root_url'] = responseData.root_url;
                     data['connection_hash'] = responseData.connection_hash;
-
+                    data['script_signature'] = responseData.script_signature;
                     postRequest(method, data);
                 })
                 .catch(error => {
