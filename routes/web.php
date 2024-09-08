@@ -27,4 +27,7 @@ Route::get('/encoding',function (){
 });
 Route::get('/apis/{id}', [ApiController::class,'getApiDetails']);
 Route::post('/sendRequest', [ApiController::class,'sendRequest']);
+Route::post('/updateApiSetting', [ApiController::class,'updateApiSetting']);
 Route::get('/apiList',[ApiController::class,'listApi']);
+Route::get('/getSettings',[ApiController::class,'getSettings']);
+Route::post('/hashGenerator',[ApiController::class,'hashGenerator']);

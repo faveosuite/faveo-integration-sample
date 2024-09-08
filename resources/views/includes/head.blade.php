@@ -4,6 +4,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <base href="{{url('/')}}">
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>Faveo</title>
 
     <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
@@ -20,6 +24,7 @@
     <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.extra-components.css") }}>
     <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.light.css") }}>
     <link rel="stylesheet" href={{ asset("/dist/css/alt/adminlte.pages.css") }}>
+    <script src="{{ asset('/Helper/helpers.js') }}"></script>
 <style>
     code{
         color: #007bff;

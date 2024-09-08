@@ -1,12 +1,13 @@
 <?php
 
+use App\Models\Setting;
+
 function aplCustomPost($url, $post_info = '', $refer = '')
 {
     $user_agent = 'license manager cURL';
     $connect_timeout = 10;
     $server_response_array = [];
     $formatted_headers_array = [];
-
     if (filter_var($url, FILTER_VALIDATE_URL) && ! empty($post_info)) {
         if (empty($refer) || ! filter_var($refer, FILTER_VALIDATE_URL)) { //use original URL as refer when no valid refer URL provided
             $refer = $url;
@@ -76,4 +77,52 @@ function getCurl($get_url, $token = null)
     curl_close($ch);
 
     return json_decode($content, true);
+}
+function successResponse($message = '', $data = '', $statusCode = 200)
+{
+    $response = ['success' => true];
+    // if message given
+    if (! empty($message)) {
+        $response['message'] = $message;
+    }
+    $response['data'] = $data;
+    return response()->json($response, $statusCode);
+}
+
+function errorResponse($message, $statusCode = 400)
+{
+    $statusCode = ($statusCode) ?: 400;
+
+    return response()->json(['success' => false, 'message' => $message], $statusCode);
+}
+
+function aplGenerateScriptSignature($ROOT_URL, $CLIENT_EMAIL, $LICENSE_CODE, $APL_PRODUCT_ID)
+{
+    $setting = Setting::where('id', 1)->first();
+    $licenseManagerURL = !empty($setting) ? $setting->license_manager_url : '';
+    $script_signature = '';
+    $root_ips_array = gethostbynamel(aplGetRawDomain($licenseManagerURL));
+    if (! empty($ROOT_URL) && isset($CLIENT_EMAIL) && isset($LICENSE_CODE) && ! empty($root_ips_array)) {
+        $script_signature = hash('sha256', gmdate('Y-m-d').$ROOT_URL.$CLIENT_EMAIL.$LICENSE_CODE.$APL_PRODUCT_ID.implode('', $root_ips_array));
+    }
+    return $script_signature;
+}
+function aplGetRawDomain($url)
+{
+    $raw_domain = '';
+
+    if (! empty($url)) {
+        $scheme = parse_url($url, PHP_URL_SCHEME); //check if scheme exists because URL can't be parsed properly without a scheme
+        if (empty($scheme)) { //add a temporary http:// scheme before parsing if needed
+            $url = 'http://'.$url;
+        }
+
+        $raw_domain = str_ireplace('www.', '', parse_url($url, PHP_URL_HOST));
+    }
+
+    return $raw_domain;
+}
+function appendUrl($baseUrl, $endpoint) {
+    // Ensure there's only one slash between the base URL and the endpoint
+    return rtrim($baseUrl, '/') . '/' . ltrim($endpoint, '/');
 }
