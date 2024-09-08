@@ -10,7 +10,7 @@
 
     <title>License Manager Documentation</title>
 
-    <link href="https://support.faveohelpdesk.com/themes/default/common/images/favicon.ico" rel="shortcut icon">
+    <link  rel="shortcut icon" href={{ asset("/themes/images/favicon.ico") }}>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
