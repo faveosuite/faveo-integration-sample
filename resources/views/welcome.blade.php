@@ -16,6 +16,6 @@
     @include('includes.footer')
 </div>
 <!-- ./wrapper -->
-@include('includes.foot')
 </body>
+@include('includes.foot')
 </html>

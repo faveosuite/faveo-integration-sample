@@ -35,18 +35,13 @@
                 <div class="card card-light">
                     <div class="card-header">
                         <h3 class="card-title">Api Settings</h3>
-                        <span class="v-popper--has-tooltip" style="margin-left: 2px; position: relative; top: 0px; color: rgb(51, 122, 183);">
-                            <i class="fas fa-question-circle" style="font-size: medium; cursor: help;"></i></span>
-                        <div class="card-tools switch-pos">
-                            <div class="btn-tool">
-                                <div class="toggle-container toggle-switch" tabindex="0" aria-checked="true" role="switch">
-                                    <input type="checkbox" id="toggle" name="toggle" value="true" style="display: none;">
-                                    <div class="toggle toggle-on">
-                                        <span class="toggle-handle toggle-handle-on"></span><span class="toggle-label">&nbsp;</span><!--v-if-->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Example usage in a Blade view -->
+                        <x-tooltip
+                            placement="top"
+                            message="Configure the settings to connect to the License Manager."
+                            size="16px"
+                        />
+
                     </div>
                         <div class="card-body">
                             <div class="protocol protocol-settings">

@@ -25,6 +25,7 @@
     <link rel="stylesheet" href={{ asset("/themes/css/adminlte.light.min.css") }}>
     <link rel="stylesheet" href={{ asset("/themes/css/adminlte.pages.min.css") }}>
     <script src="{{ asset('/Helper/helpers.js') }}"></script>
+    <script src={{ asset("/themes/js/jquery.min.js") }}></script>
 <style>
     code{
         color: #007bff;
