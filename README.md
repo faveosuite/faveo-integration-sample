@@ -93,12 +93,20 @@ php artisan db:seed
 
 ### 9. Set Directory Permissions
 
-Ensure that the `storage` and `bootstrap/cache` directories are writable by the web server:
+Ensure that the `storage` and `bootstrap/cache` directories are writable by the web server.
 
+#### Linux/macOS:
 ```bash
 chmod -R 775 storage
 chmod -R 775 bootstrap/cache
 ```
+#### Windows (Run in Administrator Command Prompt):
+
+```cmd
+icacls storage /grant "IIS_IUSRS:(OI)(CI)F"
+icacls bootstrap/cache /grant "IIS_IUSRS:(OI)(CI)F"` 
+```
+_Note: Replace `IIS_IUSRS` with the appropriate user group if using a different web server or environment._
 
 ### 10. Start the Development Server
 
