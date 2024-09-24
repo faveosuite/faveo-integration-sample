@@ -27,7 +27,8 @@ class ApiController extends Controller
         $endpoint = $request->input('endpoint');
         $setting = Setting::where('id', 1)->first();
         $licenseManagerURL = !empty($setting) ? $setting->license_manager_url : '';
-        $response = aplCustomPost(appendUrl($licenseManagerURL,$endpoint), $post, $licenseManagerURL);
+        $currentURL = url('/');
+        $response = aplCustomPost(appendUrl($licenseManagerURL,$endpoint), $post, $currentURL);
         return successResponse($response);
     }
     public function listApi()
@@ -65,7 +66,7 @@ class ApiController extends Controller
         $product_key = $request->input('product_key') ? $request->input('product_key') : '';
 
         $setting = Setting::where('id', 1)->first();
-        $ROOT_URL = !empty($setting) ? $setting->license_manager_url : '';
+        $ROOT_URL = url('/');
         $INSTALLATION_HASH = hash('sha256', $ROOT_URL . $client_email . $license_code);
         $license_signature = rawurlencode(aplGenerateScriptSignature($ROOT_URL, $client_email, $license_code, $product_id));
         $connection_hash = rawurlencode(hash('sha256', 'connection_test'));
