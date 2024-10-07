@@ -9,6 +9,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ url('apiList') }}">Integration Apis</a></li>
                         <li class="breadcrumb-item active">API Info</li>
                     </ol>
                 </div><!-- /.col -->
@@ -75,8 +76,13 @@
                             </div>
                             <div class="row mt-3">
                                 <div class="col">
-                                    <label class="form-label">Example Parameters</label>
-                                    <a class="ml-2" href="" id="generate">( Generate Parameters )</a>
+                                    <div class="row mt-1">
+                                        <label class="form-label mr-auto">Example Parameters</label>
+                                        <button class="btn btn-primary btn-sm ml-2 mb-3 mr-2" id="generate">
+                                            Generate Parameters
+                                        </button>
+                                    </div>
+
                                     <form id="parametersForm">
                                         <table class="table table-bordered bg-light">
                                             <thead>

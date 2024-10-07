@@ -31,6 +31,9 @@
     code{
         color: #007bff;
     }
+    .sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active{
+        background-color: #6c757d;
+    }
 </style>
 
 </head>
