@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Integration Apis</h1>
+                        <h1 class="m-0">Integration APIs</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                            <li class="breadcrumb-item active">Integration Apis</li>
+                            <li class="breadcrumb-item active">Integration APIs</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -34,7 +34,7 @@
                 </div>
                 <div class="card card-light">
                     <div class="card-header">
-                        <h3 class="card-title">Api Settings</h3>
+                        <h3 class="card-title">API Settings</h3>
                         <!-- Example usage in a Blade view -->
                         <x-tooltip
                             placement="top"
@@ -43,20 +43,26 @@
                         />
 
                     </div>
-                        <div class="card-body">
-                            <div class="protocol protocol-settings">
-                                <div class="row">
-                                    <div class="col-sm-6 form-group form-field-template" >
-                                        <label for="api-url" >License Manager URL</label>
-                                        <input type="url" class="form-control" name="license_manager_url" placeholder="Enter URL" id="license_manager_url" pattern="https?://.+" required>
-                                        <span id="license-error" class="error invalid-feedback"></span>
-                                    </div>
-                                    <!---->
+                    <div class="card-body">
+                        <div class="protocol protocol-settings">
+                            <div class="row">
+                                <div class="col-sm-6 form-group form-field-template">
+                                    <label for="api-url">License Manager URL</label>
+                                    <input type="url" class="form-control" name="license_manager_url"
+                                           placeholder="Enter URL" id="license_manager_url" pattern="https?://.+"
+                                           required>
+                                    <span id="license-error" class="error invalid-feedback"></span>
                                 </div>
+                                <!---->
                             </div>
                         </div>
+                    </div>
 
-                        <div class="card-footer"><button class="btn btn-primary mr-2 toastrDefaultSuccess" id="save_button"><i class="fas fa-save"></i> Save</button></div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary mr-2 toastrDefaultSuccess" id="save_button"><i
+                                class="fas fa-save"></i> Save
+                        </button>
+                    </div>
                 </div>
             </div><!-- /.container-fluid -->
         </div>
@@ -69,27 +75,16 @@
                     <div class="card-body">
                         <div class="row">
                             @foreach($apis as $api)
-                                <div class="col-sm-4">
-                                    <div class="card report-body bg-light d-flex flex-fill">
+                                <div class="col-sm-4 d-flex align-items-stretch">
+                                    <div class="card report-body bg-light flex-fill">
                                         <div class="card-header text-muted border-bottom-0 pb-0 row">
                                             <div class="card-title col-sm-12">
                                                 <div class="row">
                                                     <div class="col-sm-11 p-0">
-                                                        <div class="fa-stack fa-1x resize-icon"><i class="fa-solid fa-gear"></i></div>
-                                                        <a href="{{ url('apis/'.$api['id']) }}" class="text-header"><b data-v-87812038="">{{ $api['name'] }}</b></a>
-                                                    </div>
-                                                    <div class="col-sm-1 p-0">
-                                                        <div class="card-tools float-right">
-                                                            <div class="btn-group">
-                                            <span data-v-87812038="">
-                                                <!---->
-                                                <div class="dropdown-menu dropdown-menu-right custom-dropdown-menu">
-                                                    <a class="dropdown-item text-dark" href="javascript:;"><i class="fas fa-edit"></i>&nbsp;Edit</a>
-                                                    <a class="dropdown-item text-dark" href="javascript:;"><i class="fas fa-trash"></i>&nbsp;Delete</a>
-                                                </div>
-                                            </span>
-                                                            </div>
-                                                        </div>
+                                                        <div class="fa-stack fa-1x resize-icon"><i
+                                                                class="fa-solid fa-gear"></i></div>
+                                                        <a href="{{ url('apis/'.$api['id']) }}"
+                                                           class="text-header"><b>{{ $api['name'] }}</b></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -114,64 +109,47 @@
     </div>
     <!-- /.content-wrapper -->
 
-    <style >
+    <style>
         .report-modify {
             position: relative;
             left: 68px;
         }
 
-        .text-header{
+        .text-header {
             vertical-align: -6px;
             font-size: 15px;
         }
 
-        .text-header:hover{
+        .text-header:hover {
             color: #3c8dbc;
             cursor: pointer;
         }
 
-        .resize-icon{
+        .resize-icon {
             width: 38px !important;
             font-size: 25px !important;
         }
 
-        .report-body{
-            min-height: 150px !important;
-        }
 
-        @media (max-width: 900px) {
-            .report-body {
-                min-height: 270px !important; /* Adjust minimum height for screens up to 900px */
-            }
-        }
-
-        @media (max-width: 600px) {
-            .report-body {
-                min-height: 100px !important; /* Adjust minimum height for screens between 700px and 900px */
-            }
-        }
-
-        @media (max-width: 500px) {
-            .report-body {
-                min-height: 100px !important; /* Adjust minimum height for screens between 700px and 900px */
-            }
-        }
-
-        .custom-dropdown-menu{
+        .custom-dropdown-menu {
             position: absolute;
             top: -5px !important;
             left: 0px;
             will-change: transform;
         }
 
-        .badge-style{
+        .badge-style {
             padding-left: 3px;
             vertical-align: -5px;
         }
 
-        .ml-6 { margin-left: 6px; }
+        .ml-6 {
+            margin-left: 6px;
+        }
 
-        .fw-500 { font-weight: 500 !important; }
+        .fw-500 {
+            font-weight: 500 !important;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -206,7 +184,7 @@
 
                 const inputElement = document.getElementById('license_manager_url');
                 const errorSpan = document.getElementById('license-error');
-                const data = { license_manager_url: inputElement.value };
+                const data = {license_manager_url: inputElement.value};
 
                 if (inputElement.classList.contains('is-invalid')) {
                     return; // Prevent saving if URL is invalid
@@ -221,7 +199,7 @@
                         $('#alert').show();
 
                         // Hide the alert after 3 seconds
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $('#alert').fadeOut(); // You can use .hide() if you prefer
                         }, 3000);
                     })

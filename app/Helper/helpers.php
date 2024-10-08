@@ -8,8 +8,9 @@ function aplCustomPost($url, $post_info = '', $refer = '')
     $connect_timeout = 10;
     $server_response_array = [];
     $formatted_headers_array = [];
-    if (filter_var($url, FILTER_VALIDATE_URL) && ! empty($post_info)) {
-        if (empty($refer) || ! filter_var($refer, FILTER_VALIDATE_URL)) { //use original URL as refer when no valid refer URL provided
+    if (filter_var($url, FILTER_VALIDATE_URL) && !empty($post_info)) {
+        if (empty($refer) || !filter_var($refer, FILTER_VALIDATE_URL)) {
+            // Use original URL as refer when no valid refer URL provided
             $refer = $url;
         }
         $ch = curl_init();
@@ -26,29 +27,31 @@ function aplCustomPost($url, $post_info = '', $refer = '')
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($ch, CURLOPT_MAXREDIRS, 10);
 
-        //this function is called by curl for each header received - https://stackoverflow.com/questions/9183178/can-php-curl-retrieve-response-headers-and-body-in-a-single-request
-        curl_setopt($ch, CURLOPT_HEADERFUNCTION,
-            function ($curl, $header) use (&$formatted_headers_array) {
-                $len = strlen($header);
-                $header = explode(':', $header, 2);
-                if (count($header) < 2) { //ignore invalid headers
-                    return $len;
-                }
-
-                $name = strtolower(trim($header[0]));
-                $formatted_headers_array[$name] = trim($header[1]);
-
+        // This function is called by curl for each header received
+        curl_setopt($ch, CURLOPT_HEADERFUNCTION, function ($curl, $header) use (&$formatted_headers_array) {
+            $len = strlen($header);
+            $header = explode(':', $header, 2);
+            if (count($header) < 2) { // Ignore invalid headers
                 return $len;
             }
-        );
+            $name = strtolower(trim($header[0]));
+            $formatted_headers_array[$name] = trim($header[1]);
+
+            return $len;
+        });
 
         $result = curl_exec($ch);
-        $curl_error = curl_error($ch); //returns a human readable error (if any)
+        $curl_error = curl_error($ch); // Returns a human-readable error (if any)
         curl_close($ch);
 
         $server_response_array['headers'] = $formatted_headers_array;
+
+        // Check if content-type is not HTML and add body
+        if (!isset($formatted_headers_array['content-type']) || strpos($formatted_headers_array['content-type'], 'application/octet-stream') === false) {
+            $server_response_array['body'] = $result;
+        }
+
         $server_response_array['error'] = $curl_error;
-        $server_response_array['body'] = $result;
     }
 
     return $server_response_array;
