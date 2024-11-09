@@ -1,3 +1,4 @@
+@include('includes.spinner')
 <div class="content-wrapper px-4 py-2">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -199,6 +200,7 @@
     }
 
     function fetchData(url, data) {
+        showSpinner();
         return fetch(getApiUrl(url), {
             method: 'POST',
             headers: {
@@ -208,13 +210,18 @@
             body: JSON.stringify(data)
         })
             .then(response => response.json())
-            .then(responseData => responseData.data)
+            .then(responseData => {
+                hideSpinner(); // Hide loader once data is received
+                return responseData.data;
+            })
             .catch(error => {
+                hideSpinner(); // Hide loader in case of error
                 console.error('There was an error!', error);
             });
     }
 
     function postRequest(method, data) {
+        showSpinner()
         const postData = {
             method: method,
             post: data,
@@ -231,11 +238,13 @@
         })
             .then(response => response.json())
             .then(data => {
+                hideSpinner(); 
                 const formattedJson = JSON.stringify(data.message, null, 2);
                 const responseDiv = document.getElementById('responseDiv');
                 responseDiv.innerHTML = `<pre>${escapeHtml(formattedJson)}</pre>`;
             })
             .catch(error => {
+                hideSpinner();
                 console.error('There was an error!', error);
             });
     }
