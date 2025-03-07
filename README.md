@@ -1,9 +1,9 @@
-#  Agora Sample Integration
+#  Faveo Invoicing & License manager Sample Integration
 
 This repository contains a sample [Laravel](https://github.com/laravel/laravel) web application, showcasing integration with the following platforms:
 
-- [Agora Invoicing](https://github.com/ladybirdweb/agora-invoicing-community)
-- [Agora License Manager](https://github.com/ladybirdweb/agora-license-manager)
+- [Faveo Invoicing](https://github.com/ladybirdweb/faveo-invoicing-community)
+- [Faveo License Manager](https://github.com/ladybirdweb/faveo-license-manager)
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Before setting up the project, ensure the following are installed on your system
 To get started, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/ladybirdweb/agora-integration-sample.git
+git clone https://github.com/ladybirdweb/faveo-integration-sample.git
 ```
 
 ### 2. Navigate to the Project Directory
@@ -29,7 +29,7 @@ git clone https://github.com/ladybirdweb/agora-integration-sample.git
 Move into the project directory:
 
 ```bash
-cd agora-integration-sample
+cd faveo-integration-sample
 ```
 
 ### 3. Install PHP Dependencies
@@ -137,7 +137,7 @@ If you discover any security vulnerabilities, please report them to support@fave
 
 ## Need Help?
 
-For assistance, visit the [issue page](https://github.com/ladybirdweb/agora-integration-sample/issues). If you need professional support, you can contact us through the [Faveo Helpdesk contact form](http://www.faveohelpdesk.com/contact-us/).
+For assistance, visit the [issue page](https://github.com/ladybirdweb/faveo-integration-sample/issues). If you need professional support, you can contact us through the [Faveo Helpdesk contact form](http://www.faveohelpdesk.com/contact-us/).
 
 ## Follow Us
 
